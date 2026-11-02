@@ -1,0 +1,16 @@
+# Una línia per foto (i una per a la música): fitxer | enllaç de la pàgina d'origen | autor
+# Exemple:
+# b2_01.jpg | https://unsplash.com/photos/... | Nom de l'autor
+b2_01.jpg |  | 
+b2_02.jpg |  | 
+b2_03.jpg |  | 
+b2_04.jpg |  | 
+b2_05.jpg |  | 
+b2_06.jpg |  | 
+b2_07.jpg |  | 
+b2_08.jpg |  | 
+app_termes.jpg |  | 
+app_smfai.jpg |  | 
+app_gallecs.jpg |  | 
+b7_mirador.jpg |  | 
+track.mp3 |  | 

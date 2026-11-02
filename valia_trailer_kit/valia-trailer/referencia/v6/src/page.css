@@ -1,0 +1,97 @@
+/* ===================== Pàgina del prototip (fora del mòbil) ===================== */
+/* Concepte: banc de proves sobri al voltant d'un iPhone 15; el protagonista és el mòbil. */
+:root{
+  --page-bg:#EEF0EF; --page-text:#0B0D0C; --page-muted:#55605A; --card:#FFFFFF; --line:#DDE2DF; --brand:#00754A; --chip:#E3F4EC; --warnbg:#F6EBD0; --warntx:#6B4A00; --newbg:#0B0D0C; --newtx:#FFFFFF;
+  --f-body:-apple-system,BlinkMacSystemFont,'SF Pro Text','Inter',system-ui,sans-serif; --f-display:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter',system-ui,sans-serif;
+  --s:1;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --page-bg:#0C0E0D; --page-text:#F3F5F4; --page-muted:#A7B0AB; --card:#1A1D1B; --line:#2C312E; --brand:#3BD49A; --chip:#163026; --warnbg:#3A2F14; --warntx:#E8B04B; --newbg:#F3F5F4; --newtx:#0B0D0C; color-scheme:dark; }
+}
+:root[data-theme="dark"]{ --page-bg:#0C0E0D; --page-text:#F3F5F4; --page-muted:#A7B0AB; --card:#1A1D1B; --line:#2C312E; --brand:#3BD49A; --chip:#163026; --warnbg:#3A2F14; --warntx:#E8B04B; --newbg:#F3F5F4; --newtx:#0B0D0C; color-scheme:dark; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--page-bg);color:var(--page-text);font-family:var(--f-body);font-size:16px;line-height:1.55}
+main{max-width:1320px;margin:0 auto;padding:28px 16px 72px}
+h1,h2,h3{font-family:var(--f-display);letter-spacing:-.02em;line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(28px,4vw,40px)}
+main > section > h2{font-size:26px;margin:56px 0 0}
+.lead{max-width:78ch;color:var(--page-muted);margin:12px 0 0}
+.how{margin:14px 0 0;padding-left:20px;color:var(--page-muted);max-width:80ch}
+.how li{margin:2px 0}
+a{color:var(--brand)}
+.tag{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600;background:var(--chip);color:var(--page-text)}
+.tag.new{background:var(--newbg);color:var(--newtx)}
+.tag.pend{background:var(--warnbg);color:var(--warntx)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;min-width:0}
+.panel h3{font-size:18px;margin:0 0 10px}
+.note{font-size:13px;color:var(--page-muted);margin:10px 0 0}
+.sub{font-size:20px;margin:30px 0 12px}
+
+/* escenari: mòbil + panell lateral */
+.stage{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:start;margin-top:26px}
+.phone-col{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);display:flex;flex-direction:column;align-items:center}
+.phone-wrap{width:calc(413px * var(--s));height:calc(872px * var(--s))}
+.phone{position:relative;width:393px;height:852px;margin:10px;border-radius:55px;overflow:hidden;background:#000;box-shadow:0 0 0 10px #0d0f0d,0 0 0 11px rgba(255,255,255,.12),0 28px 70px rgba(0,0,0,.35);transform:scale(var(--s));transform-origin:top left;isolation:isolate}
+.now{font-size:13px;color:var(--page-muted);margin:10px 0 0;min-height:20px;text-align:center}
+.side{display:flex;flex-direction:column;gap:16px;min-width:0}
+.ph{font-size:17px;margin:0 0 12px}
+.ctl{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;border-top:1px solid var(--line)}
+.ctl:first-of-type{border-top:0}
+.ctl.col{flex-direction:column;align-items:stretch;justify-content:center;padding:8px 0}
+.ctl label,.ctl > span{font-size:15px}
+.pswitch{position:relative;width:51px;height:44px;border:0;background:none;cursor:pointer;flex:none}
+.pswitch::before{content:"";position:absolute;left:0;top:6.5px;width:51px;height:31px;border-radius:16px;background:#C9CFCC;transition:background-color .2s}
+.pswitch::after{content:"";position:absolute;left:2px;top:8.5px;width:27px;height:27px;border-radius:14px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.2);transition:transform .3s cubic-bezier(.3,1.5,.5,1)}
+.pswitch[aria-checked="true"]::before{background:#00A86B}
+.pswitch[aria-checked="true"]::after{transform:translateX(20px)}
+.pseg{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;padding:3px;border-radius:12px;background:color-mix(in srgb,var(--page-text) 7%,transparent)}
+.pseg button{flex:1 1 auto;min-height:44px;border:0;border-radius:9px;background:transparent;color:var(--page-text);font:600 13px var(--f-body);cursor:pointer;padding:0 8px}
+.pseg button[aria-checked="true"]{background:var(--card);box-shadow:0 1px 4px rgba(0,0,0,.14)}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pbtn{min-height:44px;padding:0 14px;border-radius:12px;border:1.5px solid var(--line);background:transparent;color:var(--page-text);font:600 14px var(--f-body);cursor:pointer}
+.pbtn:hover{border-color:var(--brand)}
+#index{display:flex;flex-direction:column;gap:14px;margin-top:12px}
+#index h3{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--page-muted);margin:0 0 6px}
+#index .ilist{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:6px}
+#index button{display:flex;align-items:center;gap:10px;min-height:44px;width:100%;padding:6px 10px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--page-text);font:500 14px/1.25 var(--f-body);text-align:left;cursor:pointer}
+#index button b{flex:none;min-width:34px;height:26px;border-radius:7px;display:grid;place-items:center;background:color-mix(in srgb,var(--page-text) 8%,transparent);font-size:12px;font-variant-numeric:tabular-nums}
+#index button[aria-current="true"]{border-color:var(--brand);box-shadow:inset 0 0 0 1px var(--brand)}
+#index button:hover{border-color:var(--brand)}
+.pswitch:focus-visible,.pseg button:focus-visible,.pbtn:focus-visible,#index button:focus-visible,.gal button:focus-visible{outline:3px solid #0A63D6;outline-offset:2px}
+
+/* mascota: galeria */
+.rules{margin-top:16px}.rules ul{margin:0;padding-left:20px;max-width:96ch}.rules li{margin:5px 0}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:12px}
+.gal{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.gal .gv{position:relative;height:178px;display:flex;align-items:flex-end;justify-content:center;gap:22px;padding-bottom:12px;background:#FFFFFF}
+.gal .gv.dk{background:linear-gradient(#2B3A31,#17201B)}
+.gal .gv .masc{color:#0E8257;line-height:0}
+.gal .gv.dk .masc{color:#fff}
+.gal .gv .rmtag{position:absolute;right:8px;top:8px;font-size:11px;font-weight:700;color:#55605A;background:#F1F3F2;border-radius:6px;padding:2px 6px}
+.gal .gt{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.gal .gt b{font-size:15px}
+.gal .gt p{margin:0;font-size:13px;color:var(--page-muted)}
+.gal .gt button{align-self:flex-start;min-height:44px;padding:0 12px;border-radius:10px;border:1.5px solid var(--line);background:transparent;color:var(--page-text);font:600 13px var(--f-body);cursor:pointer;margin-top:auto}
+.tw{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:16px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font-weight:700;background:color-mix(in srgb,var(--card) 92%,var(--page-text))}
+td q{quotes:"«" "»"}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px;margin-top:16px}
+.grid2 ul,#checks,#pendlist,#srclist{margin:0;padding-left:20px}
+.grid2 li,#checks li,#pendlist li,#srclist li{margin:6px 0}
+#checks li::marker{content:"✓  ";color:var(--brand);font-weight:700}
+
+/* capa de VoiceOver dins del mòbil */
+.vo-layer{z-index:200!important}
+.vo-box{position:absolute;border:2px solid #0A63D6;border-radius:6px;pointer-events:none}
+.vo-box.small{border-color:#D70015;border-style:dashed}
+.vo-tag{position:absolute;left:-2px;top:-17px;max-width:220px;padding:1px 5px;border-radius:4px;background:#0A63D6;color:#fff;font:600 10px/1.4 -apple-system,'Inter',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vo-box.small .vo-tag{background:#D70015}
+
+@media (max-width:900px){
+  .stage{grid-template-columns:1fr}
+  .phone-col{position:static}
+}
+#srclist,#pendlist,#checks{overflow-wrap:anywhere}
