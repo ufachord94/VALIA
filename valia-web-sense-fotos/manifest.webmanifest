@@ -1,0 +1,38 @@
+{
+  "name": "Valia · Turisme actiu al Vallès Oriental",
+  "short_name": "Valia",
+  "lang": "ca",
+  "dir": "ltr",
+  "description": "Prototip de l'app de turisme actiu i sostenible del Vallès Oriental (Treball de Recerca).",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "categories": [
+    "travel",
+    "sports",
+    "lifestyle"
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
