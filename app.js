@@ -1,5 +1,6 @@
 document.documentElement.lang="ca";
-const PH={"fageda": "img/fageda.webp", "gallecs": "img/gallecs.webp", "termes": "img/termes.webp", "smfai": "img/smfai.webp", "load": "data:image/webp;base64,UklGRmoEAABXRUJQVlA4IF4EAACQLACdASqCABkBPrVSnkquObAnLnRq+zAWiWcqvO8XI8sWxFeolZZUbVi9zKqnwIJphrL1dA7f3Cppbor5Cg3GkMNx+f1ahjRMMwCqz/SRRYviK6yZ8CbToqHXBY1XDtT0kfgN4GVyzUfU49EQb50yybv4WW/7hGYlPB/Y/rHsaSkPsBFBnTZ0dedR0vDS2DV3xo7tcaua8y4cFQg3jgV/ja8TEkzmXdYcbWt4uzuzJheWA3zAxyBp8cwNW/f4f3v13BRFyM4mIiJM9+SYU6oBHC7nB/t7ZR3IKF6wzZTYLx4qK/5nwywTrSUv1vPG6qxBqMVva51ReZVBSQsi5Xn9WBDTQzzOlmFgmZ1Eb0M6+dGwXRjhCgfrq8c2wA5yswEUUEaK0IhGkeBwexPMUo/WflsibLUqbpnos9aQzsNWjp7Vrs7yk2FY1I7t8yzL2d4jKwXwfu2RZNr/4drZOnafS37pMOxyL7weaTRWAAD+6fpgYZ5cHCn+7SG3f2yzleeI5bhSa3lXgc6HCUqy1dqPj/1H7tz6ZxBG0uTFiKavKD0PMlzSJon0oDChUPnugMgnjMF+ql7mXfHsPXjeJys693frlqT5SXUy1KzxfljtrjYETIjSo/QGxhVKDe7qKh8KTZQmAKwI8+4SAaU8AwOJSGHEhubcgeL7ql0Izvcg5ZkysxJUJ3q2sc/ZKlUXwRhifghm/qLH75jqhWw/kJVy4KyCm31yFhj7MZf+MB5+kQADZVAb+gXNFqeyia4tFnohGgqoBQk1MFS3N8ZzSyX9ZhLkTNmbFh4AAKj5b1/SfiMHtwRqBiA9aNQGp1nTDnz2LjUQG7nDywQHZYhYVjq74PqdbD9a/WpNKxToaih7sKOYTsu7Cbad6ZFeAGpGgi+ZwP3IUNkmEr/F4rbwt3aOqQmQn19TZ7FZcnyuQ+3Pnlx/lsvlBu3gY5cL7k2ooSBtLUe5JyRFmMZKIZ86odavCAsB1fV+VsRamrrOUzLA8LEB0bJyNJRTTOCvJF5DK/0erwJfroMgDVfGaqWqlA/vTdgYcIeDh2s9J4CDjClptLWVTJz8MERX2e/yFH/X3rSBjgZPJWtQo+QHBFP5SSwWvSHMgDuhiM40A2d0k0XutcbEKFssqRgYBFadUUDfxP5hineHLas+S9OmLClvEUjB72uXADNRbPnJKqSZBkWO3WTtBGVdH6l/AQc+L6kRPJR9ik9TNNyTO4u69TWENN5TT4I6YQEspuY58HCn7kXpmJiFIqf0qKp86oxq9c8I0icfbZSbRy19/T6JVWbuUNDLr25e40mxPO5filB7+nKGPJez8WbLSEDfYRnOHrd8cUaJYaH5g4BIHpoAV0geHd0KoJI8P1YduvqUpOPu1QoxKCA4Z4VGGfM2lDNHzOJJBU1yqz22PstAWR8d2WzUqiOwkaKauaY3TRsnjvdEt2YO5lBWnda1RFdCL1c44xYWpgoFLskvM/nccu7xcQAAAA==", "family_raw": "img/fageda.webp", "hikers_raw": "img/gallecs.webp", "sea_raw": "img/termes.webp"};
+const PH={"acces-1": "img/placa-esglesia-escultura.webp", "acces-2": "img/btt-torre-cim.webp", "acces-3": "img/ciclistes-tardor-platans.webp", "carrega": "data:image/webp;base64,UklGRiQCAABXRUJQVlA4IBgCAADwFQCdASqCAFcAPrVQn0onJSKkrbb7mOAWiWU7f1gFEArdKDB2Xfi/9zNcVNh6Gat4Bmes+ajJFpNSqwbMgq6D6r9A0LQD4JtmtUb40BjZZymY2OtMMEjK87wUNrdbNKgrhLqu9y+mZyWj+NVKf9e2OD0M1Z2paL4xLZSrWTm1+RL8HhqA3XphyLsDXOcVfHIDKTRa92EO7aAIDU0m1wdFyexPfLJxiInJOkUeBzKtrD+P7QxaZ/kAAP7twyzWuZl8jhAsL38RbFzZtQ/yexqqKO2koNmFKULHn9ryW9cL73FGPb6+ddp1HvrauTA8atdnY2o71jftzfprmLjOYZqlBHqxeduKJmdijcjFpDz8JWYYlFAseaOjVA5OLM+LxecXWFPGIueX96EdLkpXUdYOy3HIGi8POBMshkRl+fktMHhbAnHzH3bG7Ig5OHUSKRVWHwcKMHUCIJHDM/n7Jg2CpcOFwevcIr43ynbLiwoG31Sr4V8Zs5yYdL+jB4p1cgBiCPj5znZEInHQ4s7dhMpAcSWJkpA5LtWhz1YU2YsTPLPBmRkJ6VEgizVFHJ+SOoFSGdAqmKTgoSS2aHkOa78ef0wqTL7Yi0rC5Ho5cD0im9glSv7cNLqwcQrzH2h7u24a6furYtcIM9cVpR8P3xZsDlgVgVdBjOpTTBKcPWzUhasX+/t2WzQS/2bfL3oQ84Wg8pPkAAAAAA==", "ruta-caldes": "img/placa-esglesia-escultura.webp", "ruta-fai": "img/sant-miquel-del-fai.webp", "ruta-gallecs": "img/ciclistes-tardor-platans.webp", "ruta-fageda": "img/riera-tardor.webp", "ruta-turo": "img/ruines-montseny.webp", "ruta-calma": "img/esglesia-turo.webp", "ruta-porxada": "img/poble-horts.webp", "ruta-congost": "img/ciclistes-tardor-platans.webp", "ruta-cardedeu": "img/placa-esglesia-escultura.webp", "ruta-megalits": "img/castell.webp", "ruta-llinars": "img/torre-bandera.webp", "ruta-puig": "img/btt-torre-cim.webp", "punt-1": "img/poble-horts.webp", "punt-2": "img/riera-tardor.webp", "capcalera-botiga": "img/familia-cistells.webp", "capcalera-perfil": "img/excursionista-muntanya.webp", "impacte": "img/ruines-montseny.webp", "repte-1": "img/familia-cistells.webp", "repte-2": "img/ciclistes-tardor-platans.webp", "any": "img/ciclistes-tardor-platans.webp", "recompensa-bus": "img/placa-esglesia-escultura.webp", "recompensa-bici": "img/btt-torre-cim.webp", "recompensa-esmorzar": "img/restaurant.webp", "recompensa-mercat": "img/poble-horts.webp", "recompensa-museu": "img/esglesia-turo.webp", "recompensa-arbre": "img/excursionista-muntanya.webp"};
+const SLOTS={"acces-1": {"r": "9:19,5"}, "acces-2": {"r": "9:19,5"}, "acces-3": {"r": "9:19,5"}, "carrega": {"r": "9:19,5"}, "ruta-caldes": {"r": "3:2"}, "ruta-fai": {"r": "3:2"}, "ruta-gallecs": {"r": "3:2"}, "ruta-fageda": {"r": "3:2"}, "ruta-turo": {"r": "3:2"}, "ruta-calma": {"r": "3:2"}, "ruta-porxada": {"r": "3:2"}, "ruta-congost": {"r": "3:2"}, "ruta-cardedeu": {"r": "3:2"}, "ruta-megalits": {"r": "3:2"}, "ruta-llinars": {"r": "3:2"}, "ruta-puig": {"r": "3:2"}, "punt-1": {"r": "3:2"}, "punt-2": {"r": "3:2"}, "capcalera-botiga": {"r": "4:5"}, "capcalera-perfil": {"r": "4:5"}, "impacte": {"r": "3:2"}, "repte-1": {"r": "3:2"}, "repte-2": {"r": "3:2"}, "any": {"r": "9:19,5"}, "recompensa-bus": {"r": "4:3"}, "recompensa-bici": {"r": "4:3"}, "recompensa-esmorzar": {"r": "4:3"}, "recompensa-mercat": {"r": "4:3"}, "recompensa-museu": {"r": "4:3"}, "recompensa-arbre": {"r": "4:3"}};
 const LUCIDE={"home": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>", "compass": "<path d=\"m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z\"/><circle cx=\"12\" cy=\"12\" r=\"10\"/>", "rec": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><circle cx=\"12\" cy=\"12\" r=\"1\"/>", "sparkle": "<path d=\"M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z\"/><path d=\"M20 3v4\"/><path d=\"M22 5h-4\"/><path d=\"M4 17v2\"/><path d=\"M5 18H3\"/>", "user": "<path d=\"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/>", "search": "<circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/>", "sliders": "<line x1=\"21\" x2=\"14\" y1=\"4\" y2=\"4\"/><line x1=\"10\" x2=\"3\" y1=\"4\" y2=\"4\"/><line x1=\"21\" x2=\"12\" y1=\"12\" y2=\"12\"/><line x1=\"8\" x2=\"3\" y1=\"12\" y2=\"12\"/><line x1=\"21\" x2=\"16\" y1=\"20\" y2=\"20\"/><line x1=\"12\" x2=\"3\" y1=\"20\" y2=\"20\"/><line x1=\"14\" x2=\"14\" y1=\"2\" y2=\"6\"/><line x1=\"8\" x2=\"8\" y1=\"10\" y2=\"14\"/><line x1=\"16\" x2=\"16\" y1=\"18\" y2=\"22\"/>", "pin": "<path d=\"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/>", "walk": "<path d=\"M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z\"/><path d=\"M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z\"/><path d=\"M16 17h4\"/><path d=\"M4 13h4\"/>", "bike": "<circle cx=\"18.5\" cy=\"17.5\" r=\"3.5\"/><circle cx=\"5.5\" cy=\"17.5\" r=\"3.5\"/><circle cx=\"15\" cy=\"5\" r=\"1\"/><path d=\"M12 17.5V14l-3-3 4-3 2 3h2\"/>", "clock": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><polyline points=\"12 6 12 12 16 14\"/>", "mountain": "<path d=\"m8 3 4 8 5-5 5 15H2L8 3z\"/>", "heart": "<path d=\"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z\"/>", "chevL": "<path d=\"m15 18-6-6 6-6\"/>", "chevR": "<path d=\"m9 18 6-6-6-6\"/>", "chevD": "<path d=\"m6 9 6 6 6-6\"/>", "chevU": "<path d=\"m18 15-6-6-6 6\"/>", "x": "<path d=\"M18 6 6 18\"/><path d=\"m6 6 12 12\"/>", "check": "<path d=\"M20 6 9 17l-5-5\"/>", "share": "<path d=\"M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8\"/><polyline points=\"16 6 12 2 8 6\"/><line x1=\"12\" x2=\"12\" y1=\"2\" y2=\"15\"/>", "bookmark": "<path d=\"m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z\"/>", "send": "<path d=\"M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z\"/><path d=\"M6 12h16\"/>", "mic": "<path d=\"M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z\"/><path d=\"M19 10v2a7 7 0 0 1-14 0v-2\"/><line x1=\"12\" x2=\"12\" y1=\"19\" y2=\"22\"/>", "layers": "<path d=\"m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z\"/><path d=\"m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65\"/><path d=\"m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65\"/>", "locate": "<line x1=\"2\" x2=\"5\" y1=\"12\" y2=\"12\"/><line x1=\"19\" x2=\"22\" y1=\"12\" y2=\"12\"/><line x1=\"12\" x2=\"12\" y1=\"2\" y2=\"5\"/><line x1=\"12\" x2=\"12\" y1=\"19\" y2=\"22\"/><circle cx=\"12\" cy=\"12\" r=\"7\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/>", "pause": "<rect x=\"14\" y=\"4\" width=\"4\" height=\"16\" rx=\"1\"/><rect x=\"6\" y=\"4\" width=\"4\" height=\"16\" rx=\"1\"/>", "stop": "<rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\"/>", "cog": "<path d=\"M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/>", "bell": "<path d=\"M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9\"/><path d=\"M10.3 21a1.94 1.94 0 0 0 3.4 0\"/>", "globe": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20\"/><path d=\"M2 12h20\"/>", "lock": "<rect width=\"18\" height=\"11\" x=\"3\" y=\"11\" rx=\"2\" ry=\"2\"/><path d=\"M7 11V7a5 5 0 0 1 10 0v4\"/>", "help": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"/><path d=\"M12 17h.01\"/>", "wifioff": "<path d=\"M12 20h.01\"/><path d=\"M8.5 16.429a5 5 0 0 1 7 0\"/><path d=\"M5 12.859a10 10 0 0 1 5.17-2.69\"/><path d=\"M19 12.859a10 10 0 0 0-2.007-1.523\"/><path d=\"M2 8.82a15 15 0 0 1 4.177-2.643\"/><path d=\"M22 8.82a15 15 0 0 0-11.288-3.764\"/><path d=\"m2 2 20 20\"/>", "alert": "<path d=\"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3\"/><path d=\"M12 9v4\"/><path d=\"M12 17h.01\"/>", "info": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 16v-4\"/><path d=\"M12 8h.01\"/>", "eye": "<path d=\"M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/>", "mail": "<rect width=\"20\" height=\"16\" x=\"2\" y=\"4\" rx=\"2\"/><path d=\"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7\"/>", "route": "<circle cx=\"6\" cy=\"19\" r=\"3\"/><path d=\"M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15\"/><circle cx=\"18\" cy=\"5\" r=\"3\"/>", "shield": "<path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/>", "text": "<polyline points=\"4 7 4 4 20 4 20 7\"/><line x1=\"9\" x2=\"15\" y1=\"20\" y2=\"20\"/><line x1=\"12\" x2=\"12\" y1=\"4\" y2=\"20\"/>", "pencil": "<path d=\"M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z\"/><path d=\"m15 5 4 4\"/>", "flag": "<path d=\"M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z\"/><line x1=\"4\" x2=\"4\" y1=\"22\" y2=\"15\"/>", "landmark": "<line x1=\"3\" x2=\"21\" y1=\"22\" y2=\"22\"/><line x1=\"6\" x2=\"6\" y1=\"18\" y2=\"11\"/><line x1=\"10\" x2=\"10\" y1=\"18\" y2=\"11\"/><line x1=\"14\" x2=\"14\" y1=\"18\" y2=\"11\"/><line x1=\"18\" x2=\"18\" y1=\"18\" y2=\"11\"/><polygon points=\"12 2 20 7 4 7\"/>", "tree": "<path d=\"M8 19a4 4 0 0 1-2.24-7.32A3.5 3.5 0 0 1 9 6.03V6a3 3 0 1 1 6 0v.04a3.5 3.5 0 0 1 3.24 5.65A4 4 0 0 1 16 19Z\"/><path d=\"M12 19v3\"/>", "msg": "<path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"/>", "out": "<path d=\"M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4\"/><polyline points=\"16 17 21 12 16 7\"/><line x1=\"21\" x2=\"9\" y1=\"12\" y2=\"12\"/>", "euro": "<path d=\"M4 10h12\"/><path d=\"M4 14h9\"/><path d=\"M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2\"/>", "leaf": "<path d=\"M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z\"/><path d=\"M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12\"/>", "arrow": "<path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/>", "map": "<path d=\"M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z\"/><path d=\"M15 5.764v15\"/><path d=\"M9 3.236v15\"/>", "gift": "<rect x=\"3\" y=\"8\" width=\"18\" height=\"4\" rx=\"1\"/><path d=\"M12 8v13\"/><path d=\"M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7\"/><path d=\"M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5\"/>", "bolt": "<path d=\"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z\"/>", "bus": "<path d=\"M8 6v6\"/><path d=\"M15 6v6\"/><path d=\"M2 12h19.6\"/><path d=\"M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3\"/><circle cx=\"7\" cy=\"18\" r=\"2\"/><path d=\"M9 18h5\"/><circle cx=\"16\" cy=\"18\" r=\"2\"/>", "card": "<rect width=\"20\" height=\"14\" x=\"2\" y=\"5\" rx=\"2\"/><line x1=\"2\" x2=\"22\" y1=\"10\" y2=\"10\"/>", "repeat": "<path d=\"m17 2 4 4-4 4\"/><path d=\"M3 11v-1a4 4 0 0 1 4-4h14\"/><path d=\"m7 22-4-4 4-4\"/><path d=\"M21 13v1a4 4 0 0 1-4 4H3\"/>", "shop": "<path d=\"m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7\"/><path d=\"M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8\"/><path d=\"M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4\"/><path d=\"M2 7h20\"/><path d=\"M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7\"/>", "users": "<path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M22 21v-2a4 4 0 0 0-3-3.87\"/><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"/>", "camera": "<path d=\"M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z\"/><circle cx=\"12\" cy=\"13\" r=\"3\"/>", "plus": "<path d=\"M5 12h14\"/><path d=\"M12 5v14\"/>", "trophy": "<path d=\"M6 9H4.5a2.5 2.5 0 0 1 0-5H6\"/><path d=\"M18 9h1.5a2.5 2.5 0 0 0 0-5H18\"/><path d=\"M4 22h16\"/><path d=\"M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22\"/><path d=\"M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22\"/><path d=\"M18 2H6v7a6 6 0 0 0 12 0V2Z\"/>", "download": "<path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><polyline points=\"7 10 12 15 17 10\"/><line x1=\"12\" x2=\"12\" y1=\"15\" y2=\"3\"/>", "cloudDown": "<path d=\"M12 13v8l-4-4\"/><path d=\"m12 21 4-4\"/><path d=\"M4.393 15.269A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.436 8.284\"/>", "hdd": "<line x1=\"22\" x2=\"2\" y1=\"12\" y2=\"12\"/><path d=\"M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z\"/><line x1=\"6\" x2=\"6.01\" y1=\"16\" y2=\"16\"/><line x1=\"10\" x2=\"10.01\" y1=\"16\" y2=\"16\"/>", "phone": "<path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\"/>", "siren": "<path d=\"M7 18v-6a5 5 0 1 1 10 0v6\"/><path d=\"M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z\"/><path d=\"M21 12h1\"/><path d=\"M18.5 4.5 18 5\"/><path d=\"M2 12h1\"/><path d=\"M12 2v1\"/><path d=\"m4.929 4.929.707.707\"/><path d=\"M12 12v6\"/>", "radio": "<path d=\"M4.9 19.1C1 15.2 1 8.8 4.9 4.9\"/><path d=\"M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5\"/><circle cx=\"12\" cy=\"12\" r=\"2\"/><path d=\"M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5\"/><path d=\"M19.1 4.9C23 8.8 23 15.1 19.1 19\"/>", "thermo": "<path d=\"M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z\"/>", "rain": "<path d=\"M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242\"/><path d=\"M16 14v6\"/><path d=\"M8 14v6\"/><path d=\"M12 16v6\"/>", "umbrella": "<path d=\"M22 12a10.06 10.06 1 0 0-20 0Z\"/><path d=\"M12 12v8a2 2 0 0 0 4 0\"/><path d=\"M12 2v1\"/>", "wind": "<path d=\"M12.8 19.6A2 2 0 1 0 14 16H2\"/><path d=\"M17.5 8a2.5 2.5 0 1 1 2 4H2\"/><path d=\"M9.8 4.4A2 2 0 1 1 11 8H2\"/>", "sun": "<circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2\"/><path d=\"M12 20v2\"/><path d=\"m4.93 4.93 1.41 1.41\"/><path d=\"m17.66 17.66 1.41 1.41\"/><path d=\"M2 12h2\"/><path d=\"M20 12h2\"/><path d=\"m6.34 17.66-1.41 1.41\"/><path d=\"m19.07 4.93-1.41 1.41\"/>", "cloudSun": "<path d=\"M12 2v2\"/><path d=\"m4.93 4.93 1.41 1.41\"/><path d=\"M20 12h2\"/><path d=\"m19.07 4.93-1.41 1.41\"/><path d=\"M15.947 12.65a4 4 0 0 0-5.925-4.128\"/><path d=\"M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z\"/>", "nav": "<polygon points=\"3 11 22 2 13 21 11 13 3 11\"/>", "alertC": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\"/><line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\"/>", "share2": "<circle cx=\"18\" cy=\"5\" r=\"3\"/><circle cx=\"6\" cy=\"12\" r=\"3\"/><circle cx=\"18\" cy=\"19\" r=\"3\"/><line x1=\"8.59\" x2=\"15.42\" y1=\"13.51\" y2=\"17.49\"/><line x1=\"15.41\" x2=\"8.59\" y1=\"6.51\" y2=\"10.49\"/>", "calendar": "<path d=\"M8 2v4\"/><path d=\"M16 2v4\"/><rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\"/><path d=\"M3 10h18\"/>", "star": "<path d=\"M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z\"/>", "school": "<path d=\"M14 22v-4a2 2 0 1 0-4 0v4\"/><path d=\"m18 10 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.382a1 1 0 0 1 .553-.894L6 10\"/><path d=\"M18 5v17\"/><path d=\"m4 6 7.106-3.553a2 2 0 0 1 1.788 0L20 6\"/><path d=\"M6 5v17\"/><circle cx=\"12\" cy=\"9\" r=\"2\"/>", "building": "<path d=\"M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z\"/><path d=\"M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2\"/><path d=\"M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2\"/><path d=\"M10 6h4\"/><path d=\"M10 10h4\"/><path d=\"M10 14h4\"/><path d=\"M10 18h4\"/>", "target": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><circle cx=\"12\" cy=\"12\" r=\"6\"/><circle cx=\"12\" cy=\"12\" r=\"2\"/>", "award": "<path d=\"m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526\"/><circle cx=\"12\" cy=\"8\" r=\"6\"/>", "medal": "<path d=\"M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15\"/><path d=\"M11 12 5.12 2.2\"/><path d=\"m13 12 5.88-9.8\"/><path d=\"M8 7h8\"/><circle cx=\"12\" cy=\"17\" r=\"5\"/><path d=\"M12 18v-2h-.5\"/>", "thumbs": "<path d=\"M7 10v12\"/><path d=\"M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z\"/>", "trash": "<path d=\"M3 6h18\"/><path d=\"M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6\"/><path d=\"M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2\"/><line x1=\"10\" x2=\"10\" y1=\"11\" y2=\"17\"/><line x1=\"14\" x2=\"14\" y1=\"11\" y2=\"17\"/>", "wifi": "<path d=\"M12 20h.01\"/><path d=\"M2 8.82a15 15 0 0 1 20 0\"/><path d=\"M5 12.859a10 10 0 0 1 14 0\"/><path d=\"M8.5 16.429a5 5 0 0 1 7 0\"/>", "refresh": "<path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"/><path d=\"M21 3v5h-5\"/><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"/><path d=\"M8 16H3v5\"/>", "image": "<rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" ry=\"2\"/><circle cx=\"9\" cy=\"9\" r=\"2\"/><path d=\"m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21\"/>", "car": "<path d=\"M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2\"/><circle cx=\"7\" cy=\"17\" r=\"2\"/><path d=\"M9 17h6\"/><circle cx=\"17\" cy=\"17\" r=\"2\"/>", "train": "<path d=\"M8 3.1V7a4 4 0 0 0 8 0V3.1\"/><path d=\"m9 15-1-1\"/><path d=\"m15 15 1-1\"/><path d=\"M9 19c-2.8 0-5-2.2-5-5v-4a8 8 0 0 1 16 0v4c0 2.8-2.2 5-5 5Z\"/><path d=\"m8 19-2 3\"/><path d=\"m16 19 2 3\"/>", "link": "<path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\"/><path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\"/>", "gauge": "<path d=\"m12 14 4-4\"/><path d=\"M3.34 19a10 10 0 1 1 17.32 0\"/>", "droplets": "<path d=\"M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z\"/><path d=\"M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97\"/>", "dots": "<circle cx=\"12\" cy=\"12\" r=\"1\"/><circle cx=\"19\" cy=\"12\" r=\"1\"/><circle cx=\"5\" cy=\"12\" r=\"1\"/>", "checkC": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m9 12 2 2 4-4\"/>", "smile": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M8 14s1.5 2 4 2 4-2 4-2\"/><line x1=\"9\" x2=\"9.01\" y1=\"9\" y2=\"9\"/><line x1=\"15\" x2=\"15.01\" y1=\"9\" y2=\"9\"/>", "signpost": "<path d=\"M12 13v8\"/><path d=\"M12 3v3\"/><path d=\"M18 6a2 2 0 0 1 1.387.56l2.307 2.22a1 1 0 0 1 0 1.44l-2.307 2.22A2 2 0 0 1 18 13H6a2 2 0 0 1-1.387-.56l-2.306-2.22a1 1 0 0 1 0-1.44l2.306-2.22A2 2 0 0 1 6 6z\"/>", "nav2": "<polygon points=\"12 2 19 21 12 17 5 21 12 2\"/>", "sprout": "<path d=\"M7 20h10\"/><path d=\"M10 20c5.5-2.5.8-6.4 3-10\"/><path d=\"M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z\"/><path d=\"M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z\"/>", "activity": "<path d=\"M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2\"/>", "trend": "<polyline points=\"22 7 13.5 15.5 8.5 10.5 2 17\"/><polyline points=\"16 7 22 7 22 13\"/>", "dog": "<path d=\"M11.25 16.25h1.5L12 17z\"/><path d=\"M16 14v.5\"/><path d=\"M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444a11.702 11.702 0 0 0-.493-3.309\"/><path d=\"M8 14v.5\"/><path d=\"M8.5 8.5c-.384 1.05-1.083 2.028-2.344 2.5-1.931.722-3.576-.297-3.656-1-.113-.994 1.177-6.53 4-7 1.923-.321 3.651.845 3.651 2.235A7.497 7.497 0 0 1 14 5.277c0-1.39 1.844-2.598 3.767-2.277 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5\"/>", "baby": "<path d=\"M9 12h.01\"/><path d=\"M15 12h.01\"/><path d=\"M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5\"/><path d=\"M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1\"/>", "crosshair": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"22\" x2=\"18\" y1=\"12\" y2=\"12\"/><line x1=\"6\" x2=\"2\" y1=\"12\" y2=\"12\"/><line x1=\"12\" x2=\"12\" y1=\"6\" y2=\"2\"/><line x1=\"12\" x2=\"12\" y1=\"22\" y2=\"18\"/>", "vibrate": "<path d=\"m2 8 2 2-2 2 2 2-2 2\"/><path d=\"m22 8-2 2 2 2-2 2 2 2\"/><rect width=\"8\" height=\"14\" x=\"8\" y=\"5\" rx=\"1\"/>", "eyeOff": "<path d=\"M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49\"/><path d=\"M14.084 14.158a3 3 0 0 1-4.242-4.242\"/><path d=\"M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143\"/><path d=\"m2 2 20 20\"/>", "cloud": "<path d=\"M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z\"/>", "userPlus": "<path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><line x1=\"19\" x2=\"19\" y1=\"8\" y2=\"14\"/><line x1=\"22\" x2=\"16\" y1=\"11\" y2=\"11\"/>", "copy": "<rect width=\"14\" height=\"14\" x=\"8\" y=\"8\" rx=\"2\" ry=\"2\"/><path d=\"M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2\"/>", "calendarDays": "<path d=\"M8 2v4\"/><path d=\"M16 2v4\"/><rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\"/><path d=\"M3 10h18\"/><path d=\"M8 14h.01\"/><path d=\"M12 14h.01\"/><path d=\"M16 14h.01\"/><path d=\"M8 18h.01\"/><path d=\"M12 18h.01\"/><path d=\"M16 18h.01\"/>", "moreV": "<circle cx=\"12\" cy=\"12\" r=\"1\"/><circle cx=\"12\" cy=\"5\" r=\"1\"/><circle cx=\"12\" cy=\"19\" r=\"1\"/>", "flagOff": "<path d=\"M8 2c3 0 5 2 8 2s4-1 4-1v11\"/><path d=\"M4 22V4\"/><path d=\"M4 15s1-1 4-1 5 2 8 2\"/><line x1=\"2\" x2=\"22\" y1=\"2\" y2=\"22\"/>", "milestone": "<path d=\"M12 13v8\"/><path d=\"M12 3v3\"/><path d=\"M4 6a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h13a2 2 0 0 0 1.152-.365l3.424-2.317a1 1 0 0 0 0-1.635l-3.424-2.318A2 2 0 0 0 17 6z\"/>"};
 
 /* ---- spring.js ---- */
@@ -29,7 +30,9 @@ const LUCIDE={"home": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><
     if (cache[k]) return cache[k];
     const x = fn(response, damping, 0), D = settle(x, 0.0015), N = 48, pts = [];
     for (let i = 0; i <= N; i++) { const t = D * i / N; pts.push((i === N ? 1 : 1 - x(t)).toFixed(4) + ' ' + (100 * i / N).toFixed(2) + '%'); }
-    return (cache[k] = { easing: 'linear(' + pts.join(', ') + ')', duration: Math.round(D * 1000), response, damping });
+    // la corba es manté igual però la durada queda entre 150 i 450 ms (sistema de moviment de Valia):
+    // si la molla trigaria més a reposar, es comprimeix en el temps (equival a una molla una mica més rígida, sense salts)
+    return (cache[k] = { easing: 'linear(' + pts.join(', ') + ')', duration: Math.min(450, Math.max(150, Math.round(D * 1000))), response, damping });
   }
   /* animació per JS: from → to amb velocitat inicial (unitats/s) */
   function runSpring(o) {
@@ -951,42 +954,44 @@ const IOS = (function () {
 
   /* ---------- transició «heroi»: la targeta es converteix en la capçalera del detall ---------- */
   const Hero = {
+    /* transició compartida només amb transform i opacity: la foto de la targeta es desplaça i s'amplia
+       (escala uniforme, sense deformar-la) mentre la capçalera de destinació apareix amb un fos */
     async push(prev, pg, o) {
       const src = o.src, tgt = pg.el.querySelector(o.target || '[data-hero]');
       if (!src || !tgt) { await fade(pg.el, 0, 1, 240); return; }
-      const a = rectIn(src), b = rectIn(tgt);
-      const clone = h(`<div class="pimg" style="position:absolute;z-index:58;left:${a.x}px;top:${a.y}px;width:${a.w}px;height:${a.h}px;border-radius:16px;background-size:cover"></div>`);
-      const bpA = getComputedStyle(src).backgroundPosition, bpB = getComputedStyle(tgt).backgroundPosition;
-      clone.style.backgroundImage = getComputedStyle(src).backgroundImage; clone.style.backgroundPosition = bpA;
-      app.appendChild(clone); src.style.visibility = 'hidden'; tgt.style.visibility = 'hidden';
+      const a = rectIn(src), b = rectIn(tgt), k = b.w / a.w, dx = b.x - a.x, dy = b.y + (b.h - a.h * k) / 2 - a.y;
+      const clone = h(`<div class="pimg hero-clone" style="position:absolute;z-index:58;left:${a.x}px;top:${a.y}px;width:${a.w}px;height:${a.h}px;border-radius:16px;background-size:cover;transform-origin:0 0"></div>`);
+      clone.style.backgroundImage = getComputedStyle(src).backgroundImage; clone.style.backgroundPosition = getComputedStyle(src).backgroundPosition;
+      app.appendChild(clone); src.style.visibility = 'hidden';
       pg.el.style.zIndex = 2; prev.el.style.zIndex = 1;
       const kids = [...pg.scroll.children].filter(c => !c.contains(tgt)).slice(0, 6);
-      kids.forEach(k => { k.style.opacity = 0; });
+      kids.forEach(k2 => { k2.style.opacity = 0; });
       pg.el.style.background = 'transparent'; pg.el.style.opacity = 1;
       const bg = h('<div style="position:absolute;inset:0;background:#fff;opacity:0;z-index:0"></div>'); pg.el.prepend(bg);
       await Promise.all([
-        anim(clone, [{ left: a.x + 'px', top: a.y + 'px', width: a.w + 'px', height: a.h + 'px', borderRadius: '16px', backgroundPosition: bpA }, { left: b.x + 'px', top: b.y + 'px', width: b.w + 'px', height: b.h + 'px', borderRadius: '0px', backgroundPosition: bpB }], S.hero),
+        anim(clone, [{ transform: 'translate(0,0) scale(1)', opacity: 1 }, { transform: `translate(${dx}px,${dy}px) scale(${k})`, opacity: 1, offset: 0.55 }, { transform: `translate(${dx}px,${dy}px) scale(${k})`, opacity: 0 }], S.hero),
+        anim(tgt, [{ opacity: 0, transform: 'scale(1.04)' }, { opacity: 1, transform: 'scale(1)' }], S.hero),
         anim(bg, [{ opacity: 0 }, { opacity: 1 }], fadeSp(260)),
         anim(prev.dim(), [{ opacity: 0 }, { opacity: 0.12 }], S.hero),
         stagger(kids, { delay: 120, dy: 22 })
       ]);
-      kids.forEach(k => { k.style.opacity = ''; });
-      tgt.style.visibility = ''; clone.remove(); bg.remove(); pg.el.style.background = ''; src.style.visibility = '';
+      kids.forEach(k2 => { k2.style.opacity = ''; });
+      clone.remove(); bg.remove(); pg.el.style.background = ''; src.style.visibility = '';
       pg.heroBack = { src };
     },
     async pop(prev, pg) {
       const src = pg.heroBack.src, tgt = pg.el.querySelector('[data-hero]');
       if (!src || !src.isConnected || !tgt) { await fade(pg.el, 1, 0, 220); return; }
-      const a = rectIn(tgt), b = rectIn(src);
-      const clone = h(`<div class="pimg" style="position:absolute;z-index:58;left:${a.x}px;top:${a.y}px;width:${a.w}px;height:${a.h}px;border-radius:0;background-size:cover"></div>`);
-      const bpA = getComputedStyle(tgt).backgroundPosition, bpB = getComputedStyle(src).backgroundPosition;
-      clone.style.backgroundImage = getComputedStyle(tgt).backgroundImage; clone.style.backgroundPosition = bpA;
-      app.appendChild(clone); src.style.visibility = 'hidden';
+      const a = rectIn(tgt), b = rectIn(src), k = b.w / a.w, dx = b.x - a.x, dy = b.y + (b.h - a.h * k) / 2 - a.y;
+      const clone = h(`<div class="pimg hero-clone" style="position:absolute;z-index:58;left:${a.x}px;top:${a.y}px;width:${a.w}px;height:${a.h}px;border-radius:0;background-size:cover;transform-origin:0 0"></div>`);
+      clone.style.backgroundImage = getComputedStyle(tgt).backgroundImage; clone.style.backgroundPosition = getComputedStyle(tgt).backgroundPosition;
+      app.appendChild(clone);
       await Promise.all([
-        anim(clone, [{ left: a.x + 'px', top: a.y + 'px', width: a.w + 'px', height: a.h + 'px', borderRadius: '0px', backgroundPosition: bpA }, { left: b.x + 'px', top: b.y + 'px', width: b.w + 'px', height: b.h + 'px', borderRadius: '16px', backgroundPosition: bpB }], S.hero),
+        anim(clone, [{ transform: 'translate(0,0) scale(1)', opacity: 1 }, { transform: `translate(${dx}px,${dy}px) scale(${k})`, opacity: 1, offset: 0.7 }, { transform: `translate(${dx}px,${dy}px) scale(${k})`, opacity: 0 }], S.hero),
+        anim(src, [{ opacity: 0 }, { opacity: 0, offset: 0.45 }, { opacity: 1 }], S.hero),
         fade(pg.el, 1, 0, 200), anim(prev.dim(), [{ opacity: 0.12 }, { opacity: 0 }], S.hero)
       ]);
-      src.style.visibility = ''; clone.remove();
+      clone.remove();
     }
   };
 
@@ -1141,13 +1146,13 @@ const IOS = (function () {
 
   /* ---------- microinteraccions ---------- */
   function bindPress(rootEl) {
-    rootEl.addEventListener('pointerdown', e => { const b = e.target.closest('.press,.btn,.chip,.acard,.tile,.grow,.navbtn,.iconbtn'); if (!b || rm()) return; b.classList.add('down'); b.style.transition = 'transform .1s cubic-bezier(.2,.8,.2,1)'; b.style.transform = 'scale(.96)'; b._pressed = true; });
+    rootEl.addEventListener('pointerdown', e => { const b = e.target.closest('.press,.btn,.chip,.acard,.tile,.grow,.navbtn,.iconbtn,.sug'); if (!b || rm()) return; b.classList.add('down'); b.style.transition = 'transform .15s cubic-bezier(.2,.8,.2,1)'; b.style.transform = 'scale(.96)'; b._pressed = true; });
     const up = e => { $$('[style*="scale(0.96)"],[style*="scale(.96)"]', rootEl).forEach(b => { if (!b._pressed) return; b._pressed = false; b.style.transition = ''; anim(b, [{ transform: 'scale(.96)' }, { transform: 'scale(1)' }], S.micro).then(() => { b.style.transform = ''; }); }); };
     rootEl.addEventListener('pointerup', up); rootEl.addEventListener('pointercancel', up); rootEl.addEventListener('pointerleave', up);
   }
   function segmented(el, onChange) {
     const btns = $$('button', el), knob = h('<span class="knob" aria-hidden="true"></span>'); el.prepend(knob);
-    const place = (i, animate) => { const b = btns[i], to = { left: (b.offsetLeft + 2) + 'px', width: (b.offsetWidth - 4) + 'px' }; if (animate && !rm()) { const from = { left: knob.style.left || to.left, width: knob.style.width || to.width }; anim(knob, [from, to], S.micro); } knob.style.left = to.left; knob.style.width = to.width; };
+    const place = (i, animate) => { const b = btns[i], tx = `translateX(${b.offsetLeft + 2}px)`; knob.style.left = '0px'; knob.style.width = (b.offsetWidth - 4) + 'px'; if (animate && !rm()) { const from = knob.style.transform || tx; anim(knob, [{ transform: from }, { transform: tx }], S.micro); } knob.style.transform = tx; };
     const sel = Math.max(0, btns.findIndex(b => b.getAttribute('aria-selected') === 'true'));
     requestAnimationFrame(() => place(sel, false));
     btns.forEach((b, i) => b.addEventListener('click', () => { btns.forEach(x => x.setAttribute('aria-selected', x === b)); place(i, true); onChange && onChange(i, b); }));
@@ -1270,7 +1275,9 @@ const Store = (function () {
 })();
 /* icones (Lucide, ISC): traç 2 fins a 20 px i 1,75 a partir de 22 px */
 function ICN(n, s, c) { s = s || 22; if (!LUCIDE[n]) console.warn('Icona inexistent: ' + n); return `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${c || 'currentColor'}" stroke-width="${s <= 20 ? 2 : 1.75}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${LUCIDE[n] || ''}</svg>`; }
-const photo = (k, st, pos, extra) => `<div class="pimg cc bg-${k}" style="${st || ''};background-position:${pos || '50% 50%'}" ${extra || 'aria-hidden="true"'}></div>`;
+/* forats de foto: cada imatge porta el nom de fitxer i la proporció (es veuen amb ?fotos a l'adreça) */
+const slotAt = k => (typeof SLOTS !== 'undefined' && SLOTS[k]) ? ` data-slot="${k}.jpg · ${SLOTS[k].r}"` : '';
+const photo = (k, st, pos, extra) => `<div class="pimg cc bg-${k}"${slotAt(k)} style="${st || ''};background-position:${pos || '50% 50%'}" ${extra || 'aria-hidden="true"'}></div>`;
 const fmt = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 const SBAR = '<span class="sb-t">9:41</span><span class="sb-i"><svg width="18" height="12" viewBox="0 0 18 12" aria-hidden="true"><rect x="0" y="8" width="3" height="4" rx="1" fill="currentColor"/><rect x="5" y="5.5" width="3" height="6.5" rx="1" fill="currentColor"/><rect x="10" y="3" width="3" height="9" rx="1" fill="currentColor"/><rect x="15" y="0" width="3" height="12" rx="1" fill="currentColor"/></svg><svg width="17" height="12" viewBox="0 0 17 12" aria-hidden="true"><path d="M8.5 2.3c2.3 0 4.4.9 6 2.4l1-1.1A10.4 10.4 0 0 0 8.5.8 10.4 10.4 0 0 0 1.5 3.6l1 1.1a8.8 8.8 0 0 1 6-2.4zm0 3.6c1.3 0 2.5.5 3.4 1.3l1-1.1a7.2 7.2 0 0 0-8.8 0l1 1.1c.9-.8 2.1-1.3 3.4-1.3zm0 3.5c.6 0 1.1.2 1.5.6L8.5 11.5 7 10c.4-.4.9-.6 1.5-.6z" fill="currentColor"/></svg><svg width="27" height="13" viewBox="0 0 27 13" aria-hidden="true"><rect x=".5" y=".5" width="22" height="12" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="19" height="9" rx="2.2" fill="currentColor"/><path d="M24 4.5v4c.8-.3 1.5-1.1 1.5-2s-.7-1.7-1.5-2z" fill="currentColor" opacity=".5"/></svg></span>';
 
@@ -1433,7 +1440,7 @@ const App = (function () {
     IOS.$$('.tabbar button', IOS.scenes.main).forEach(b => b.setAttribute('aria-selected', b.dataset.tab === k));
     const b = IOS.$(`.tabbar button[data-tab="${k}"] .ti`, IOS.scenes.main);
     if (b && !IOS.rm()) IOS.anim(b, [{ transform: 'scale(.78)' }, { transform: 'scale(1)' }], IOS.S.micro);
-    const top = stacks[k].top; if (top) { if (!IOS.rm()) IOS.fade(top.el, 0.6, 1, 160); top.d.reappear && top.d.reappear(top.el, top.params, top); onPage(top); }
+    const top = stacks[k].top; if (top) { if (!IOS.rm()) IOS.anim(top.el, [{ opacity: 0.4, transform: 'translateY(10px)' }, { opacity: 1, transform: 'none' }], IOS.S.soft); top.d.reappear && top.d.reappear(top.el, top.params, top); onPage(top); }
   }
   function showScene(name) {
     scene = name;
@@ -1533,21 +1540,21 @@ const ACTS = [
 ];
 const fmtH = h => { const hh = Math.floor(h), mm = Math.round((h - hh) * 60); return mm ? `${hh} h ${String(mm).padStart(2, '0')}` : `${hh} h`; };
 const fmtKm = k => String(k).replace('.', ',') + ' km';
-ACTS.forEach(a => { a.m = [fmtH(a.h), fmtKm(a.km), '+' + a.up + ' m']; a.sub = `${a.mun} · ${a.ty.join(', ')}`; a.pts = Math.round(40 + a.km * 6 + a.up / 10); });
+ACTS.forEach(a => { const sk = 'ruta-' + a.id; a.slot = sk; a.img = (typeof PH !== 'undefined' && PH[sk]) ? sk : null; a.m = [fmtH(a.h), fmtKm(a.km), '+' + a.up + ' m']; a.sub = `${a.mun} · ${a.ty.join(', ')}`; a.pts = Math.round(40 + a.km * 6 + a.up / 10); });
 const actById = id => ACTS.find(a => a.id === id) || ACTS[0];
 /* miniatura: foto provisional o, si no n'hi ha, mapa estilitzat amb el traçat */
 const actImg = (a, style, extra) => a.img
-  ? `<div class="pimg cc bg-${a.img}" ${extra || ''} style="${style};background-position:${a.pos}"></div>`
-  : `<div class="pimg cc mapthumb" ${extra || ''} style="${style}">${mapSVG(393, 220, { route: a.route, seed: a.seed, pins: [[.14, .86, 'start'], [.82, .2, 'end']] })}</div>`;
+  ? `<div class="pimg cc bg-${a.img}"${slotAt(a.slot)} ${extra || ''} style="${style};background-position:${a.pos}"></div>`
+  : `<div class="pimg cc mapthumb"${slotAt(a.slot)} ${extra || ''} style="${style}">${mapSVG(393, 220, { route: a.route, seed: a.seed, pins: [[.14, .86, 'start'], [.82, .2, 'end']] })}</div>`;
 
 /* ---- scr_onb.js ---- */
 /* ===================== Pantalles · primera vegada (2–10 i 36) ===================== */
 (function () {
   const SC = IOS.SCREENS, h = IOS.h;
   const SLIDES = [
-    { img: 'family_raw', h: 'Descobreix el Vallès que tens a tocar.', p: "Natura, cultura i història d'un territori que potser encara no coneixes." },
-    { img: 'hikers_raw', h: "Mou-te a l'aire lliure, amb seny.", p: "Activitat física i turisme sostenible per gaudir del territori sense malmetre'l." },
-    { img: 'sea_raw', h: 'Una IA pròpia que coneix el territori.', p: "T'ajuda a descobrir què fer a prop de casa, a la teva manera." }
+    { img: 'acces-1', h: 'Descobreix el Vallès que tens a tocar.', p: "Natura, cultura i història d'un territori que potser encara no coneixes." },
+    { img: 'acces-2', h: "Mou-te a l'aire lliure, amb seny.", p: "Activitat física i turisme sostenible per gaudir del territori sense malmetre'l." },
+    { img: 'acces-3', h: 'Una IA pròpia que coneix el territori.', p: "T'ajuda a descobrir què fer a prop de casa, a la teva manera." }
   ];
   /* indicadors com a forats al panell (v4/v5) */
   function maskFor(idx, Hh) {
@@ -1561,7 +1568,7 @@ const actImg = (a, style, extra) => a.img
   /* 2 · Accés: fotos de l'equip al carrusel i les tres entrades */
   SC[2] = {
     title: 'Accés', nav: false, cls: 'dark acc', sb: 'light-always', tabbar: false,
-    render: () => `<div class="acc-car" data-car role="region" aria-label="Presentació: 3 diapositives">${SLIDES.map((s, i) => `<section class="acc-sl" aria-label="Diapositiva ${i + 1} de 3"><div class="pimg bg-${s.img}" style="position:absolute;left:0;right:0;top:0;height:620px"></div><div class="acc-scrim"></div><div class="acc-dot"></div><div class="acc-tx"><h2>${s.h}</h2><p>${s.p}</p></div></section>`).join('')}</div>
+    render: () => `<div class="acc-car" data-car role="region" aria-label="Presentació: 3 diapositives">${SLIDES.map((s, i) => `<section class="acc-sl" aria-label="Diapositiva ${i + 1} de 3"><div class="pimg bg-${s.img}"${slotAt(s.img)} style="position:absolute;left:0;right:0;top:0;height:620px"></div><div class="acc-scrim"></div><div class="acc-dot"></div><div class="acc-tx"><h2>${s.h}</h2><p>${s.p}</p></div></section>`).join('')}</div>
       <div class="acc-top"><span class="acc-logo">${ValiaAnim.logoSVG({ variant: 'mono', size: 32, label: 'Valia' })}</span><span class="acc-wm">Valia</span></div>
       <div class="acc-pan"><div class="acc-in"><button type="button" class="btn" data-go="reg">Registra't</button><button type="button" class="btn out acc-md" data-go="login">Inicia sessió</button><button type="button" class="tbtn mut" data-go="guest">Entra com a convidat</button></div></div>
       <div class="sr" aria-live="polite" data-pos>Diapositiva 1 de 3</div>`,
@@ -1882,7 +1889,8 @@ const actImg = (a, style, extra) => a.img
       App.st.chat.push({ err: true, t: 'Ara no tinc connexió: ho tornem a provar?' });
       render(C); C.setState('error'); C.busy = false; toBottom(C); MascotUI.announce('Assistent: Ara no tinc connexió: ho tornem a provar?'); return;
     }
-    const msg = answer(t);
+    // «Ruta a mida» pot aportar la resposta dels missatges que genera ella mateixa; la resta, com sempre
+    const msg = (window.ChatAnswerHook && window.ChatAnswerHook(t)) || answer(t);
     App.st.chat.push(Object.assign({}, msg, { t: '', _full: msg.t }));
     render(C); C.setState('responent');
     const rows = C.box.querySelectorAll('.mrow.ai:not(.err)'); const row = [...rows].filter(r => !r.querySelector('.chips')).pop();
@@ -1909,7 +1917,7 @@ const actImg = (a, style, extra) => a.img
     if (k === 'responent') { App.st.chat = []; render(C); C.inp.value = "Recomana'm una ruta per aquesta tarda"; submit(C, { think: 300, wordMs: 260 }); }
     if (k === 'error') { App.st.chat = [{ me: true, t: "Recomana'm una ruta per aquesta tarda" }, { err: true, t: 'Ara no tinc connexió: ho tornem a provar?' }]; render(C); C.setState('error'); }
   }
-  window.ChatAPI = { render, greet, preset };
+  window.ChatAPI = { render, greet, preset, submit };
 })();
 
 /* ---- scr_explore.js ---- */
@@ -2092,7 +2100,7 @@ const actImg = (a, style, extra) => a.img
     navCenter: p => esc(actById(p.id).t),
     navRight: p => `<button type="button" class="navbtn" data-share aria-label="Compartir"><span class="gl">${ICN('share', 20)}</span></button><button type="button" class="navbtn" data-save aria-label="Desar" aria-pressed="${App.st.saved[actById(p.id).id] ? 'true' : 'false'}"><span class="gl">${ICN('bookmark', 20, App.st.saved[actById(p.id).id] ? '#00A86B' : 'currentColor')}</span></button>`,
     render: p => { const a = actById(p.id);
-      return `${a.img ? `<div class="pimg dhero bg-${a.img}" data-hero style="height:320px;background-position:${a.pos}"></div>` : `<div class="pimg dhero mapthumb" data-hero style="height:320px">${mapSVG(393, 320, { route: a.route, seed: a.seed, pins: [[.14, .86, 'start'], [.82, .2, 'end']] })}</div>`}
+      return `${a.img ? `<div class="pimg dhero bg-${a.img}"${slotAt(a.slot)} data-hero style="height:320px;background-position:${a.pos}"></div>` : `<div class="pimg dhero mapthumb"${slotAt(a.slot)} data-hero style="height:320px">${mapSVG(393, 320, { route: a.route, seed: a.seed, pins: [[.14, .86, 'start'], [.82, .2, 'end']] })}</div>`}
       <div class="dbody">
         <h1 class="t1">${a.t}</h1>
         <p class="fn mut row" style="gap:4px;margin:6px 0 0">${ICN('pin', 16)} ${a.mun}</p>
@@ -2146,7 +2154,7 @@ const actImg = (a, style, extra) => a.img
       <div class="hours" style="margin-top:14px" role="img" aria-label="Afluència per hores: ara és baixa">${hours.map((v, i) => `<span class="${i === 2 ? 'now' : ''}" style="height:${v * 8}%"></span>`).join('')}</div><div class="row fn mut" style="justify-content:space-between;margin-top:4px"><span>8 h</span><span>14 h</span><span>20 h</span></div>
       <div class="info" style="margin-top:12px">${ICN('leaf', 20, 'var(--tint-tx)')}<span>Millor hora: abans de les 11 h. Anar-hi quan hi ha poca gent ajuda a no massificar l'entorn.</span></div>
       ${a.id === 'caldes' ? `<div class="row" style="justify-content:space-between;margin:28px 0 10px"><h2 class="t3">Punts destacats</h2><button type="button" class="tbtn" data-all>Veure'ls tots (8)</button></div>
-      <div class="hlrow">${hl('termes', '30% 55%', 'Termes romanes', 'Laia · fa 3 dies', 'Al migdia hi ha menys gent i el vapor es veu millor.', 12)}${hl('termes', '92% 28%', 'Font del Lleó', 'Jordi · fa 1 setmana', "L'aigua surt molt calenta: vigila amb els nens.", 9)}</div>
+      <div class="hlrow">${hl('punt-1', '30% 55%', 'Termes romanes', 'Laia · fa 3 dies', 'Al migdia hi ha menys gent i el vapor es veu millor.', 12)}${hl('punt-2', '92% 28%', 'Font del Lleó', 'Jordi · fa 1 setmana', "L'aigua surt molt calenta: vigila amb els nens.", 9)}</div>
       <p class="fn mut" style="margin-top:10px">Consells, autors i comptadors: d'exemple.</p>` : `<p class="fn mut" style="margin-top:22px">Encara no hi ha consells de la comunitat per a aquesta ruta.</p>`}</div>`; },
     mount(el, p, pg) { const b = el.querySelector('[data-all]'); if (b) b.addEventListener('click', () => pg.stack.push(38, { id: p.id })); }
   };
@@ -2155,8 +2163,8 @@ const actImg = (a, style, extra) => a.img
   SC[38] = {
     title: 'Punts destacats', tabbar: false,
     render: () => `<div class="px col gap16"><p class="fn mut" style="margin:0">Itinerari termal de Caldes · 8 punts, en ordre de la ruta</p>
-      ${hlRow('termes', '50% 62%', '1 · Termes romanes', 'Laia · fa 3 dies', 'Al migdia hi ha menys gent i el vapor es veu millor des de la plaça.', 12, 4)}
-      ${hlRow('termes', '92% 28%', '2 · Font del Lleó', 'Jordi · fa 1 setmana', "L'aigua surt molt calenta: vigila amb els nens.", 9, 2)}</div>`,
+      ${hlRow('punt-1', '50% 62%', '1 · Termes romanes', 'Laia · fa 3 dies', 'Al migdia hi ha menys gent i el vapor es veu millor des de la plaça.', 12, 4)}
+      ${hlRow('punt-2', '92% 28%', '2 · Font del Lleó', 'Jordi · fa 1 setmana', "L'aigua surt molt calenta: vigila amb els nens.", 9, 2)}</div>`,
     overlay: () => `<div class="bbar"><button type="button" class="btn dark" data-add>${ICN('plus', 20, '#fff')} Afegeix un consell</button></div>`,
     mount(el) {
       el.querySelector('[data-add]').addEventListener('click', () => { if (App.needAccount('afegir consells')) return; IOS.Alert.show({ title: 'Afegeix un consell', msg: 'Els consells passen per moderació abans de publicar-se. En aquest prototip encara no es poden enviar.', buttons: [{ t: "D'acord", style: 'pref' }] }); });
@@ -2171,7 +2179,7 @@ const actImg = (a, style, extra) => a.img
     navCenter: p => esc(actById(p.id).poi),
     navRight: () => `<button type="button" class="navbtn" data-share aria-label="Compartir"><span class="gl">${ICN('share', 20)}</span></button>`,
     render: p => { const a = actById(p.id), caldes = a.id === 'caldes';
-      return `${a.img ? `<div class="pimg dhero bg-${a.img}" style="height:300px;background-position:50% 32%"></div>` : `<div class="pimg dhero mapthumb" style="height:300px">${mapSVG(393, 300, { seed: a.seed + 1, pins: [[.5, .55, 'sel']] })}</div>`}
+      return `${a.img ? `<div class="pimg dhero bg-${a.img}"${slotAt(a.slot)} style="height:300px;background-position:50% 32%"></div>` : `<div class="pimg dhero mapthumb"${slotAt(a.slot)} style="height:300px">${mapSVG(393, 300, { seed: a.seed + 1, pins: [[.5, .55, 'sel']] })}</div>`}
       <div class="dbody"><div class="row" style="gap:6px"><span class="tag">${a.ty.includes('Història') ? 'Patrimoni' : 'Natura'}</span>${caldes ? '<span class="tag">BCIN</span>' : ''}</div>
         <h1 class="t1" style="margin-top:10px">${a.poi}</h1>
         <p class="fn mut row" style="gap:4px;margin:8px 0 14px">${ICN('pin', 16)} ${caldes ? 'Plaça de la Font del Lleó · ' : ''}${a.mun}</p>
@@ -2378,7 +2386,7 @@ const Route = (function () {
   SC[22] = {
     title: 'Perfil', tabbar: true, navCls: 'on-photo', sb: 'light', scrollThreshold: 250, cls: 'profile',
     navRight: () => `<button type="button" class="navbtn" data-set aria-label="Ajustos"><span class="gl">${ICN('cog', 20)}</span></button>`,
-    render: () => `<div class="phead"><div class="pimg bg-fageda" style="position:absolute;inset:0;background-position:50% 55%"></div><div class="phead-sc"></div>
+    render: () => `<div class="phead"><div class="pimg bg-capcalera-perfil"${slotAt('capcalera-perfil')} style="position:absolute;inset:0;background-position:50% 55%"></div><div class="phead-sc"></div>
         <div class="phead-in"><h1 class="lt" data-ptitle style="color:#fff;align-self:flex-start">Perfil</h1>
         <div class="row" data-pname><span class="pav" data-pav>U</span><div class="f1"><div class="t3" style="color:#fff" data-pnm></div><div class="fn" style="color:rgba(255,255,255,.9)" data-since></div></div></div>
         <div class="glass pcard" data-pcard><div class="row" style="justify-content:space-between;gap:8px"><span class="row" style="gap:6px">${ICN('bolt', 20, '#1FD08A')}<b class="t3" data-pts></b><span class="fn mut">punts d'energia</span></span><button type="button" class="tbtn" data-shop style="color:#fff;min-height:44px;padding:0 4px">Botiga ›</button></div>
@@ -2389,7 +2397,7 @@ const Route = (function () {
         <div style="margin-top:8px"><b class="num" style="font-size:var(--t-t1)" data-sv></b><div class="fn mut" data-sl></div></div>
         <div class="chart" role="img" data-chart></div></section>
       <section class="px" id="p-impact"><div class="row" style="justify-content:space-between;margin:30px 0 10px"><h2 class="t2">Impacte sostenible</h2><button type="button" class="tbtn" data-how>Com ho calculem</button></div>
-        <div class="impact cc">${photo('smfai', 'position:absolute;inset:0', '50% 55%')}<div class="ugc-sc"></div><div class="glass" style="position:absolute;left:10px;right:10px;bottom:10px;padding:14px 16px"><div class="row fn" style="gap:6px;font-weight:600">${ICN('leaf', 16, '#1FD08A')} Total</div><div style="margin-top:6px"><b class="num" style="font-size:var(--t-t1)" data-co2></b> <span class="hd">de CO₂ estalviat (estimat)</span></div></div></div>
+        <div class="impact cc">${photo('impacte', 'position:absolute;inset:0', '50% 55%')}<div class="ugc-sc"></div><div class="glass" style="position:absolute;left:10px;right:10px;bottom:10px;padding:14px 16px"><div class="row fn" style="gap:6px;font-weight:600">${ICN('leaf', 16, '#1FD08A')} Total</div><div style="margin-top:6px"><b class="num" style="font-size:var(--t-t1)" data-co2></b> <span class="hd">de CO₂ estalviat (estimat)</span></div></div></div>
         <div class="row stats3" style="gap:8px;align-items:stretch;margin-top:10px"><div class="stat"><b data-kmc></b><span>Sense cotxe</span></div><div class="stat"><b data-chk></b><span>Check-ins</span></div><div class="stat"><b data-plc></b><span>Llocs visitats</span></div></div>
         <div class="row" style="justify-content:space-between;margin:28px 0 8px"><h2 class="t2">Comunitat</h2><button type="button" class="tbtn" data-chal>Reptes de grup ›</button></div>
         <div class="surf" style="padding:14px 16px"><div class="row" style="justify-content:space-between"><span class="row" style="gap:8px">${ICN('users', 22)}<b class="hd">Entre tots aquest mes</b></span><span class="tag eco" data-comm></span></div><p class="fn mut" style="margin:8px 0 10px" data-mine></p><div class="bar lt"><i style="width:83%"></i></div><p class="fn mut" style="margin:8px 0 0">Xifra comunitària: dada d'exemple.</p></div></section>
@@ -2453,15 +2461,15 @@ const Route = (function () {
   SC[42] = {
     title: 'Reptes de grup', short: 'Reptes', tabbar: true,
     render: () => `<div class="px col gap16">${seg(['Els meus reptes', 'Descobrir'], 0)}
-      ${chal('gallecs', '50% 38%', '100 km a peu en família', 'Família Puig · 4 membres', '64 km', '100 km', 64, 'queden 12 dies', ['A', 'M', 'J', 'L'], 'La teva aportació: 18 km (28 %)')}
-      ${chal('smfai', '50% 42%', '500 check-ins al Vallès', 'Classe de 1r de Batxillerat · 26 membres', '312', '500', 62, 'queden 20 dies', ['N', 'E', 'O', '+'], 'La teva aportació: 14 check-ins')}
+      ${chal('repte-1', '50% 38%', '100 km a peu en família', 'Família Puig · 4 membres', '64 km', '100 km', 64, 'queden 12 dies', ['A', 'M', 'J', 'L'], 'La teva aportació: 18 km (28 %)')}
+      ${chal('repte-2', '50% 42%', '500 check-ins al Vallès', 'Classe de 1r de Batxillerat · 26 membres', '312', '500', 62, 'queden 20 dies', ['N', 'E', 'O', '+'], 'La teva aportació: 14 check-ins')}
       <button type="button" class="btn" data-new>${ICN('plus', 20)} Crea un repte</button><p class="fn mut" style="margin:0">Grups, xifres i persones: il·lustratius. Reptes amb escoles o menors de 14 anys: <span class="pend">Pendent de confirmar</span></p></div>`,
     mount(el) { IOS.segmented(el.querySelector('.segc'), i => { el.querySelectorAll('.chal').forEach(c => { c.hidden = i === 1; }); let dsc = el.querySelector('[data-disc]'); if (i === 1 && !dsc) { el.querySelector('.segc').insertAdjacentHTML('afterend', '<p class="co mut" data-disc style="margin:0">Aviat podràs unir-te a reptes oberts de la comarca. Funció de demostració.</p>'); } if (dsc) dsc.hidden = i === 0; }); el.querySelector('[data-new]').addEventListener('click', () => { if (App.needAccount('crear reptes')) return; IOS.Alert.show({ title: 'Crea un repte', msg: 'Tria un objectiu (km, check-ins o rutes) i convida la teva colla. En aquest prototip els reptes de grup són de demostració.', buttons: [{ t: "D'acord", style: 'pref' }] }); }); }
   };
   /* 43 · El teu any amb Valia (pantalla completa, format història) */
   SC[43] = {
     title: 'El teu any amb Valia', nav: false, tabbar: false, cls: 'dark story', sb: 'light-always',
-    render: () => `<div class="pimg bg-gallecs" style="position:absolute;inset:0;background-position:50% 30%"></div><div class="story-sc"></div>
+    render: () => `<div class="pimg bg-any"${slotAt('any')} style="position:absolute;inset:0;background-position:50% 30%"></div><div class="story-sc"></div>
       <div class="row" style="position:absolute;left:12px;right:12px;top:58px;gap:4px" aria-hidden="true">${[1, 1, 0, 0, 0].map(v => `<i style="flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,${v ? '.95' : '.35'})"></i>`).join('')}</div>
       <div class="row" style="position:absolute;left:12px;right:4px;top:66px;justify-content:space-between"><span class="row" style="gap:8px;color:#fff">${ValiaAnim.logoSVG({ variant: 'mono', size: 24, small: true })}<b class="hd">Valia</b></span><button type="button" class="iconbtn dk" data-close aria-label="Tancar"><span class="gl">${ICN('x', 20, '#fff')}</span></button></div>
       <div class="px" style="position:absolute;left:0;right:0;top:230px;color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.45)"><p class="fn" style="font-weight:600;color:rgba(255,255,255,.9);margin:0">El teu any amb Valia · 2026</p><h1 class="t1" style="margin-top:8px" data-yk>342 km sense cotxe</h1><p class="co" style="margin:8px 0 0;color:rgba(255,255,255,.9)">Has descobert el Vallès a peu i en bici.</p></div>
@@ -2509,7 +2517,7 @@ const Route = (function () {
     title: 'Mapes sense connexió', short: 'Mapes', tabbar: true,
     render: () => `<div class="px"><div class="surf" style="padding:14px 16px"><div class="row" style="justify-content:space-between"><span class="hd">Espai al mòbil</span><span class="fn mut">24 MB de 2 GB</span></div><div class="bar lt" style="margin-top:10px"><i style="width:4%"></i></div><p class="fn mut" style="margin:8px 0 0">2 de 20 rutes descarregades (límit proposat).</p></div>
       <div class="glist" style="margin:14px 0 0"><div class="grow swrow"><span class="f1 bd">Descarregar només amb Wi-Fi</span>${sw(true, 'Descarregar només amb Wi-Fi')}</div><div class="grow swrow"><span class="f1 bd">Actualitzar automàticament</span>${sw(true, 'Actualitzar automàticament')}</div></div>
-      <h2 class="t3" style="margin:24px 0 6px">Rutes descarregades</h2>${dl('termes', '50% 60%', 'Itinerari termal de Caldes', '12 MB', 'Actualitzada', 1)}${dl('smfai', '50% 50%', 'Sant Miquel del Fai', '12 MB', 'Hi ha canvis', 0)}
+      <h2 class="t3" style="margin:24px 0 6px">Rutes descarregades</h2>${dl('ruta-caldes', '50% 60%', 'Itinerari termal de Caldes', '12 MB', 'Actualitzada', 1)}${dl('ruta-fai', '50% 50%', 'Sant Miquel del Fai', '12 MB', 'Hi ha canvis', 0)}
       <div class="info" style="margin-top:14px">${ICN('info', 20, 'var(--tint-tx)')}<span>Cada descàrrega inclou el mapa, el traçat, els check-ins i les fitxes de patrimoni. Els check-ins fets sense cobertura s'envien quan tornes a tenir connexió.</span></div><p class="fn mut" style="margin-top:10px">Pantalla de demostració.</p></div>`,
     mount(el) { el.addEventListener('click', e => { const b = e.target.closest('[data-dlact]'); if (!b) return; if (b.dataset.dlact === 'del') { b.closest('.row').remove(); IOS.Toast.show('Descàrrega esborrada', 'trash'); } else { b.dataset.dlact = 'del'; b.setAttribute('aria-label', 'Esborrar la descàrrega'); b.querySelector('.gl').innerHTML = ICN('trash', 20); const s2 = b.closest('.row').querySelector('span[style]'); if (s2) { s2.textContent = 'Actualitzada'; s2.style.color = 'var(--tint-tx)'; } IOS.Toast.show('Ruta actualitzada', 'refresh'); } }); }
   };
@@ -2586,7 +2594,7 @@ const Route = (function () {
   SC[31] = {
     title: 'Recompenses', short: 'Botiga', tabbar: true, navCls: 'on-photo', sb: 'light', scrollThreshold: 200, cls: 'rewards',
     navRight: () => `<button type="button" class="navbtn" data-hist aria-label="Historial de punts"><span class="gl">${ICN('clock', 20)}</span></button>`,
-    render: () => `<div class="phead"><div class="pimg bg-gallecs" style="position:absolute;inset:0;background-position:50% 40%"></div><div class="phead-sc"></div>
+    render: () => `<div class="phead"><div class="pimg bg-capcalera-botiga"${slotAt('capcalera-botiga')} style="position:absolute;inset:0;background-position:50% 40%"></div><div class="phead-sc"></div>
         <div class="phead-in"><h1 class="lt" style="color:#fff">Recompenses</h1>
         <div class="glass pcard" style="margin-top:18px"><p class="fn mut" style="margin:0">Els teus punts d'energia</p><div class="row" style="gap:8px;margin-top:2px">${ICN('bolt', 28, '#1FD08A')}<b class="num" style="font-size:var(--t-t1)" data-bal></b></div>
           <div data-goalbox></div></div></div></div>
@@ -2624,7 +2632,7 @@ const Route = (function () {
     title: 'Recompensa', tabbar: false, navCls: 'on-photo', backGlass: true, sb: 'light', scrollThreshold: 220, cls: 'detail',
     navRight: p => `<button type="button" class="navbtn" data-share aria-label="Compartir la recompensa"><span class="gl">${ICN('share', 20)}</span></button>`,
     render: p => { const r = byId(p.id), d = Store.cur(), isGoal = d.goal === r.id;
-      return `<div class="pimg dhero bg-${r.img}" style="height:290px;background-position:${r.pos}" role="img" aria-label="Imatge il·lustrativa: ${esc(r.cat)}"><span class="glass row" style="position:absolute;left:16px;bottom:30px;padding:8px 14px;border-radius:999px;gap:8px;font-size:var(--t-fn);font-weight:600">${ICN(r.i, 16, '#fff')} ${r.cat}</span></div>
+      return `<div class="pimg dhero bg-recompensa-${r.id}"${slotAt('recompensa-' + r.id)} style="height:290px;background-position:${r.pos}" role="img" aria-label="Imatge il·lustrativa: ${esc(r.cat)}"><span class="glass row" style="position:absolute;left:16px;bottom:30px;padding:8px 14px;border-radius:999px;gap:8px;font-size:var(--t-fn);font-weight:600">${ICN(r.i, 16, '#fff')} ${r.cat}</span></div>
       <div class="dbody"><h1 class="t1">${r.t}</h1>
         <div class="row" style="gap:8px;margin-top:10px">${ICN('bolt', 24, 'var(--tint)')}<b class="t2" style="margin:0">${fmt(r.p)}</b><span class="fn mut">punts d'energia</span></div>
         <p class="fn mut" style="margin:4px 0 0" data-after></p>
@@ -2707,6 +2715,352 @@ const Route = (function () {
   };
 })();
 
+/* ---- scr_ruta.js ---- */
+/* ===================== Assistent · «Ruta a mida»: el missatge guiat =====================
+   L'assistent passa a tenir dues pestanyes amb un selector segmentat: «Xat» (el xat de sempre, sense canvis)
+   i «Ruta a mida». Aquí qui no sap escriure un missatge per a una IA tria opcions (les mateixes categories,
+   opcions i xips que el full de filtres d'Explorar, més «A prop de») i l'app el redacta en català. La persona el
+   pot editar. «Cerca la meva ruta» l'envia al xat: es veu el missatge enviat i la resposta amb rutes del catàleg
+   que hi encaixen. La mascota acompanya el procés com al xat (saluda, escolta cada tria i ho celebra). */
+(function () {
+  const SC = IOS.SCREENS, h = IOS.h;
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  const nrm = t => String(t).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  const join = (a, w) => a.length < 2 ? (a[0] || '') : a.slice(0, -1).join(', ') + ' ' + w + ' ' + a[a.length - 1];
+  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+  const clone = S => JSON.parse(JSON.stringify(S));
+  const blank = () => ({ act: [], dur: '', dif: [], mun: '', ty: [], opt: [] });
+
+  /* ---------- opcions: les mateixes del full de filtres d'Explorar ---------- */
+  const ACT = ['A peu', 'Bici', 'Córrer'];
+  const DUR = [['lt2', 'Menys de 2 h'], ['2a4', 'De 2 a 4 h'], ['gt4', 'Més de 4 h']];
+  const DIF = ['Fàcil', 'Moderada', 'Difícil'];
+  const TY = ['Natura', 'Cultural', 'Història', 'Gastronomia'];
+  const OPT = [['fam', 'Amb nens'], ['gos', 'Amb gos'], ['tp', 'Sense cotxe (tren o bus)'], ['circ', 'Circular']];
+  /* «A prop de»: els municipis del catàleg; el centre de cada un és la mitjana de les seves rutes */
+  const MUNS = ['Granollers', 'Cardedeu', 'Llinars del Vallès', 'La Roca del Vallès', 'Mollet del Vallès', 'Caldes de Montbui', 'Bigues i Riells del Fai', 'Tagamanent', 'Fogars de Montclús'].filter(m => ACTS.some(a => a.mun === m));
+  const CENTER = {};
+  MUNS.forEach(m => { const L = ACTS.filter(a => a.mun === m); CENTER[m] = [L.reduce((s, a) => s + a.ll[0], 0) / L.length, L.reduce((s, a) => s + a.ll[1], 0) / L.length]; });
+  const RADIUS = 12;   // km
+  const km = (p, q) => { const d = Math.PI / 180, x = Math.sin((q[0] - p[0]) * d / 2) ** 2 + Math.cos(p[0] * d) * Math.cos(q[0] * d) * Math.sin((q[1] - p[1]) * d / 2) ** 2; return 12742 * Math.asin(Math.sqrt(x)); };
+  const lowArt = m => m.replace(/^La /, 'la ').replace(/^El /, 'el ');   // «a prop de la Roca del Vallès»
+
+  /* ---------- redacció del missatge (català natural) ---------- */
+  const ACT_TX = { 'A peu': 'a peu', 'Bici': 'en bicicleta', 'Córrer': 'per córrer' };
+  const DUR_TX = { lt2: 'de menys de 2 hores', '2a4': "d'entre 2 i 4 hores", gt4: 'de més de 4 hores' };
+  const TY_TX = { 'Natura': 'la natura', 'Cultural': 'la cultura', 'Història': 'la història', 'Gastronomia': 'la gastronomia' };
+  const OPT_TX = { fam: 'vaig amb nens', gos: 'porto el gos', tp: 'hi vull anar en tren o bus', circ: 'vull que sigui circular' };
+  function tokens(S) {
+    const T = [], add = (t, k) => T.push({ t, k });
+    add('Busco una ruta');   // «Busco una ruta fàcil en bicicleta de menys de 2 hores a prop de Granollers.»
+    const a = ACT.filter(x => S.act.includes(x)).map(x => ACT_TX[x]);
+    if (S.dif.length) { add(' '); add(join(DIF.filter(x => S.dif.includes(x)).map(x => x.toLowerCase()), 'o'), 'dif'); }
+    if (a.length) { add(' '); add(join(a, 'o'), 'act'); }
+    if (S.dur) { add(' '); add(DUR_TX[S.dur], 'dur'); }
+    if (S.mun) { add(' a prop de '); add(lowArt(S.mun), 'mun'); }
+    else add(' pel Vallès Oriental');
+    add('.');
+    if (S.ty.length) { add(" M'interessa "); add(join(TY.filter(x => S.ty.includes(x)).map(x => TY_TX[x]), 'i'), 'ty'); add('.'); }
+    const o = OPT.map(x => x[0]).filter(k => S.opt.includes(k)).map(k => OPT_TX[k]);
+    if (o.length) { add(' '); add(cap(join(o, 'i')), 'opt'); add('.'); }
+    return T;
+  }
+  const textOf = T => T.map(x => x.t).join('');
+
+  /* ---------- lectura del missatge (també si la persona l'ha editat) ---------- */
+  const RX = {
+    act: [['A peu', /\ba peu\b|camin|passeig|passej|excursi|senderis/], ['Bici', /bici|\bbtt\b|pedal/], ['Córrer', /\bcorre(r|nt)?\b|running|\btrail\b/]],
+    dif: [['Fàcil', /facil|tranquil|suau|planer/], ['Moderada', /moderad|mitjan|intermedi/], ['Difícil', /dificil|exigent|\brepte\b|\bdur(a|es)?\b/]],
+    ty: [['Natura', /natura|bosc|paisatg|muntany/], ['Cultural', /cultur|museu/], ['Història', /histori|patrimoni|castell|esglesi|dolmen|megalit|roman/], ['Gastronomia', /gastronom|menjar|\bkm ?0\b|mercat|productor|esmorz/]],
+    opt: [['fam', /\bnen(a|s|es)?\b|criatur|famil|\bfills\b|canalla/], ['gos', /\bgos(sos|sa)?\b|\bperro\b|mascota/], ['tp', /\btren\b|\bbus\b|autobus|sense cotxe|transport public|rodalies/], ['circ', /circular/]]
+  };
+  const DURX = [['lt2', /menys de (2|dues) h|\b1 h|una hora|hora i mitja|\bcurta\b|poca estona/], ['gt4', /mes de (4|quatre) h|\b[5-9] hores|tot el dia|jornada|dia sencer/], ['2a4', /entre (2|dues) i (4|quatre)|de (2|dues) a (4|quatre)|\b[234] hores|dues hores|tres hores|mig dia/]];
+  const MUNX = [['Granollers', /granollers/], ['Cardedeu', /cardedeu/], ['Llinars del Vallès', /llinars/], ['La Roca del Vallès', /\broca\b/], ['Mollet del Vallès', /mollet/], ['Caldes de Montbui', /caldes|montbui/], ['Bigues i Riells del Fai', /bigues|riells/], ['Tagamanent', /tagamanent/], ['Fogars de Montclús', /fogars|montclus/]];
+  function parse(text) {
+    const t = nrm(text), S = blank();
+    Object.keys(RX).forEach(k => RX[k].forEach(([v, re]) => { if (re.test(t)) S[k].push(v); }));
+    const d = DURX.find(([, re]) => re.test(t)); if (d) S.dur = d[0];
+    const m = MUNX.find(([, re]) => re.test(t)); if (m && CENTER[m[0]]) S.mun = m[0];
+    return S;
+  }
+  const isEmpty = S => !S.act.length && !S.dur && !S.dif.length && !S.ty.length && !S.mun && !S.opt.length;
+
+  /* ---------- rutes que encaixen: el mateix filtre d'Explorar + distància al municipi ---------- */
+  function match(S) {
+    let L = window.ExFilter.filterActs({ ty: S.ty, act: S.act, dif: S.dif, dur: S.dur, opt: S.opt }, '', 'Tot');
+    if (S.mun) { const c = CENTER[S.mun]; L = L.map(a => [a, km(c, a.ll)]).filter(x => x[1] <= RADIUS).sort((x, y) => x[1] - y[1]).map(x => x[0]); }
+    return L;
+  }
+
+  /* ---------- resposta de l'assistent als missatges que surten d'aquí (la resta, el xat de sempre) ---------- */
+  const SENT = new Set();
+  const RELAX = [['opt'], ['dif'], ['dur'], ['ty'], ['mun'], ['act']];   // ordre en què es deixen de banda (primer les menys importants)
+  const NUM = ['', 'una', 'dues', 'tres'];
+  /* les tries que es deixen de banda, amb el mateix nom que el xip (i en l'ordre de la pantalla) */
+  const q = s => `«${s}»`;
+  const chosen = (S, k) => k === 'act' ? ACT.filter(x => S.act.includes(x)).map(q) : k === 'dur' ? [q(DUR.find(x => x[0] === S.dur)[1])]
+    : k === 'dif' ? DIF.filter(x => S.dif.includes(x)).map(q) : k === 'mun' ? [q('A prop de ' + S.mun)]
+    : k === 'ty' ? TY.filter(x => S.ty.includes(x)).map(q) : OPT.filter(x => S.opt.includes(x[0])).map(x => q(x[1]));
+  function answerFor(text) {
+    const S = parse(text);
+    if (isEmpty(S)) {   // sense cap opció: si és el missatge per defecte, propostes variades; si l'han reescrit, respon el xat de sempre
+      if (nrm(text).trim() !== nrm(textOf(tokens(blank())))) return null;
+      return { t: 'Aquí tens tres propostes variades per començar:', cards: ['caldes', 'fai', 'gallecs'], t2: "Si em dius què t'agrada, t'ho afino més.", chips: ['Canvia les opcions'] };
+    }
+    /* si cap ruta ho compleix tot, es deixa de banda el mínim d'opcions possible (primer les menys importants) */
+    let g = clone(S), L = match(g), dropped = [];
+    const keys = RELAX.filter(([k]) => (Array.isArray(S[k]) ? S[k].length : !!S[k]));
+    for (let size = 1; !L.length && size <= keys.length; size++) {
+      const combos = []; const pick = (i, acc) => { if (acc.length === size) { combos.push(acc); return; } for (let j = i; j < keys.length; j++) pick(j + 1, acc.concat([keys[j]])); }; pick(0, []);
+      for (const cb of combos) {
+        const t = clone(S); cb.forEach(([k]) => { t[k] = Array.isArray(t[k]) ? [] : ''; });
+        const r = match(t); if (r.length) { g = t; L = r; dropped = ['act', 'dur', 'dif', 'mun', 'ty', 'opt'].filter(k => cb.some(x => x[0] === k)).flatMap(k => chosen(S, k)); break; }
+      }
+    }
+    const n = L.length, top = L.slice(0, 3).map(a => a.id), k = top.length;
+    let t;
+    if (!n) t = "No he trobat cap ruta amb aquestes opcions. Prova de canviar-ne alguna.";
+    else if (dropped.length) t = `Cap ruta compleix totes les opcions. Si deixem de banda ${join(dropped, 'i')}, ${k === 1 ? "aquesta s'hi acosta" : "aquestes s'hi acosten"}:`;
+    else t = n <= 3 ? `He trobat ${NUM[n]} ${n === 1 ? 'ruta que encaixa' : 'rutes que encaixen'} amb el que demanes:` : `He trobat ${n} rutes que encaixen amb el que demanes. Te'n proposo tres:`;
+    const t2 = !n ? undefined : g.mun ? `${k === 1 ? 'És' : 'Totes són'} a menys de ${RADIUS} km de ${lowArt(g.mun)}.` : "Les durades i les dificultats són orientatives (dades d'exemple).";
+    return { t, cards: k ? top : undefined, t2, chips: ['Canvia les opcions'] };
+  }
+  window.ChatAnswerHook = t => (SENT.has(t) ? answerFor(t) : null);
+
+  /* ---------- què diu la mascota quan tries ---------- */
+  const SAY = {
+    act: { 'A peu': 'Caminant es descobreix tot millor.', 'Bici': 'En bici! Buscaré camins sense trànsit.', 'Córrer': 'A córrer! Pistes i corriols.' },
+    dur: { lt2: 'Una sortida curta, perfecta per avui.', '2a4': "Mig dia d'aventura. M'agrada!", gt4: 'Una bona jornada: porta aigua!' },
+    dif: { 'Fàcil': 'Res de patir: camins tranquils.', 'Moderada': 'Una mica de repte, ideal.', 'Difícil': 'Repte de debò! Prepara les cames.' },
+    ty: { 'Natura': 'Natura: el Vallès en va ple.', 'Cultural': 'Pobles i cultura, apuntat.', 'Història': 'Castells, dòlmens i esglésies.', 'Gastronomia': 'I acabar amb producte Km0!' },
+    opt: { fam: 'Camins segurs per als petits.', gos: 'Que el gos també en gaudeixi.', tp: 'Només rutes amb tren o bus a prop.', circ: 'Tornaràs al mateix punt.' }
+  };
+  const GREET = "Toca el que et vingui de gust i jo t'escric el missatge.";
+
+  /* ---------- pantalla ---------- */
+  const fchip = (g, v, t) => chip(t, false, `data-g="${g}" data-v="${esc(v)}"`);
+  const paneHTML = id => `<div class="aipane" id="${id}-pr" role="tabpanel" aria-labelledby="${id}-tr" hidden>
+    <div class="aiscroll" data-rsc><div class="px">
+      <div class="gm-row aigm"><div class="gm" data-rgm></div><div class="bubble gm-b cc" data-rgb role="status">${GREET}</div></div>
+      <p class="co mut aiintro">No cal escriure res: tria opcions i toca «Cerca la meva ruta».</p>
+      <h3 class="hd fsec">Activitat</h3><div class="chips">${ACT.map(t => fchip('act', t, t)).join('')}</div>
+      <h3 class="hd fsec">Durada</h3><div class="chips">${DUR.map(([v, t]) => fchip('dur', v, t)).join('')}</div>
+      <h3 class="hd fsec">Dificultat</h3><div class="chips">${DIF.map(t => fchip('dif', t, t)).join('')}</div>
+      <h3 class="hd fsec">A prop de</h3><div class="chips scrollx">${MUNS.map(t => fchip('mun', t, t)).join('')}</div>
+      <h3 class="hd fsec">Tipus</h3><div class="chips">${TY.map(t => fchip('ty', t, t)).join('')}</div>
+      <h3 class="hd fsec">Opcions</h3><div class="chips">${OPT.map(([v, t]) => fchip('opt', v, t)).join('')}</div>
+      <p class="fn mut" style="margin-top:14px">Durades i dificultats orientatives (dades d'exemple).</p>
+    </div></div>
+    <div class="bbar aibar">
+      <div class="aiprev cc">
+        <div class="aiprev-h"><span class="mav aimav" data-rmav aria-hidden="true"></span><span class="fn aiprev-l">El teu missatge</span><span class="f1"></span><button type="button" class="tbtn aiedit" data-redit>${ICN('pencil', 16)} Edita</button></div>
+        <div class="aiprev-t" data-rtext aria-live="polite"></div>
+        <textarea class="aiprev-i" data-rinput rows="3" aria-label="Edita el missatge per a l'assistent" hidden></textarea>
+        <p class="aiprev-c" data-rcount aria-live="polite"></p>
+        <div class="aiprev-hint" data-rhint hidden><span class="fn mut">Has editat el missatge.</span><button type="button" class="tbtn" data-rrestore>${ICN('refresh', 16)} Refés-lo amb les opcions</button></div>
+      </div>
+      <button type="button" class="btn" data-rgo>${ICN('sparkle', 20)} Cerca la meva ruta</button>
+    </div>
+  </div>`;
+
+  /* el xat de sempre + el selector i la segona pestanya (s'hi afegeixen en muntar la pantalla del xat) */
+  const baseMount = SC.chat.mount, baseRight = SC.chat.navRight;
+  SC.chat.navRight = (p, pg) => baseRight(p, pg) + `<button type="button" class="navbtn press" data-rreset aria-label="Esborrar les opcions">${ICN('refresh', 22)}</button>`;
+  SC.chat.mount = function (el, p, pg) { baseMount.call(this, el, p, pg); attach(el, p, pg); };
+
+  let uid = 0;
+  function attach(el, p, pg) {
+    const id = 'ai' + (++uid), nav = pg.nav, chatSc = pg.scroll, comp = el.querySelector(':scope > .composer');
+    const R = { mode: 'xat', S: blank(), gen: '', text: '', edited: false, editing: false, greeted: false, busy: false, m: null, sw: Promise.resolve(), prevMarks: {} };
+    el.dataset.ai = 'xat';
+    /* selector segmentat dins la capçalera, sota el títol */
+    const seg = h(`<div class="aiseg"><div class="segc" role="tablist" aria-label="Assistent"><button type="button" role="tab" id="${id}-tx" aria-selected="true" aria-controls="${id}-px">Xat</button><button type="button" role="tab" id="${id}-tr" aria-selected="false" aria-controls="${id}-pr">Ruta a mida</button></div></div>`);
+    nav.appendChild(seg);
+    chatSc.id = id + '-px'; chatSc.setAttribute('role', 'tabpanel'); chatSc.setAttribute('aria-labelledby', id + '-tx');
+    const pane = h(paneHTML(id)); el.insertBefore(pane, nav);
+    const $ = s => pane.querySelector(s), sc = $('[data-rsc]'), bar = $('.aibar'), card = $('.aiprev'), txt = $('[data-rtext]'), inp = $('[data-rinput]'),
+      hint = $('[data-rhint]'), cnt = $('[data-rcount]'), editB = $('[data-redit]'), go = $('[data-rgo]'), bubble = $('[data-rgb]'), resetB = nav.querySelector('[data-rreset]');
+    const tabs = [...seg.querySelectorAll('[role="tab"]')];
+    /* la mascota petita de la targeta: sempre a la vista mentre tries (la gran queda a dalt) */
+    R.mm = Mascot.create($('[data-rmav]'), { size: 26, view: 'avatar', state: 'repos', label: 'Assistent' }); R.mm.el.style.color = '#fff';
+
+    /* la barra inferior (missatge + botó) creix amb el text: el contingut sempre queda per sobre */
+    const fit = () => { sc.style.paddingBottom = (bar.offsetHeight + (parseFloat(getComputedStyle(bar).bottom) || 0) + 16) + 'px'; };
+    const ro = new ResizeObserver(fit); ro.observe(bar); pg.cleanups.push(() => ro.disconnect());
+
+    /* capçalera de vidre segons el desplaçament de la pestanya visible */
+    const syncNav = () => nav.classList.toggle('scrolled', (R.mode === 'ruta' ? sc.scrollTop : chatSc.scrollTop) > 2);
+    sc.addEventListener('scroll', () => { if (R.mode === 'ruta') syncNav(); }, { passive: true });
+    chatSc.addEventListener('scroll', () => { if (R.mode === 'ruta') syncNav(); }, { passive: true });
+
+    /* ---------- canvi de pestanya (selector segmentat d'iOS) ---------- */
+    function setMode(m) {
+      if (R.mode === m) return R.sw;
+      R.mode = m; el.dataset.ai = m;
+      const toR = m === 'ruta', chatEls = [chatSc, comp].filter(Boolean);
+      IOS.Keyboard.hide(); if (document.activeElement && el.contains(document.activeElement)) document.activeElement.blur();
+      if (toR) { pane.hidden = false; ensureMascot(); greetOnce(); } else chatEls.forEach(e => { e.style.visibility = ''; e.inert = false; });
+      syncNav();
+      const showB = toR ? resetB : nav.querySelector('[data-new]'); if (showB && !IOS.rm()) IOS.fade(showB, 0, 1, 200);
+      const ins = toR ? [pane] : chatEls, outs = toR ? chatEls : [pane], d = toR ? 1 : -1;
+      const run = IOS.rm()
+        ? Promise.all([...outs.map(e => IOS.fade(e, 1, 0, 160)), ...ins.map(e => IOS.fade(e, 0, 1, 200))])
+        : Promise.all([...outs.map(e => IOS.anim(e, [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: `translateX(${-28 * d}px)` }], IOS.S.soft)),
+          ...ins.map(e => IOS.anim(e, [{ opacity: 0, transform: `translateX(${28 * d}px)` }, { opacity: 1, transform: 'none' }], IOS.S.soft))]);
+      R.sw = run.then(() => {
+        if (R.mode !== m) return;
+        outs.forEach(e => { if (e === pane) pane.hidden = true; else { e.style.visibility = 'hidden'; e.inert = true; } e.style.opacity = ''; e.style.transform = ''; });
+        ins.forEach(e => { e.style.opacity = ''; e.style.transform = ''; });
+      });
+      return R.sw;
+    }
+    IOS.segmented(seg.querySelector('.segc'), i => setMode(i ? 'ruta' : 'xat'));
+    const open = m => { const b = tabs[m === 'ruta' ? 1 : 0]; if (b.getAttribute('aria-selected') !== 'true') b.click(); return R.sw; };
+
+    /* ---------- mascota ---------- */
+    function ensureMascot() { if (!R.m) R.m = Mascot.create($('[data-rgm]'), { size: 104, state: 'repos', label: 'Assistent' }); }
+    function greetOnce() {
+      if (R.greeted) return; R.greeted = true;
+      if (IOS.rm()) { R.m.set('saludant'); return; }
+      R.m.set('saludant', { restart: true });
+      IOS.anim(bubble, [{ opacity: 0, transform: 'scale(.6)', transformOrigin: '0% 100%' }, { opacity: 1, transform: 'scale(1)', transformOrigin: '0% 100%' }], Spring.spring(0.42, 0.68), { delay: 300 });
+      IOS.stagger(pane.querySelectorAll('.aiintro, .fsec, .aiscroll .chips'), { delay: 160, max: 13, dy: 12 });
+      IOS.anim(bar, [{ opacity: 0, transform: 'translateY(24px)' }, { opacity: 1, transform: 'none' }], IOS.S.soft, { delay: 120 });
+    }
+    function say(line) {
+      if (!R.m) return;
+      [R.m, R.mm].forEach(m => { m.set('escoltant'); m.pulse(); });
+      clearTimeout(R.mt); R.mt = setTimeout(() => { if (!R.busy) [R.m, R.mm].forEach(m => m && m.set('repos')); }, 1600);
+      if (line && bubble.textContent !== line) {
+        bubble.textContent = line;
+        if (!IOS.rm()) IOS.anim(bubble, [{ opacity: 0.35, transform: 'scale(.94)', transformOrigin: '0% 100%' }, { opacity: 1, transform: 'none', transformOrigin: '0% 100%' }], IOS.S.micro);
+      }
+    }
+
+    /* ---------- vista prèvia del missatge ---------- */
+    function count(S) {
+      const n = match(S).length;
+      cnt.innerHTML = n ? `${ICN('checkC', 15)}<span>${n} ${n === 1 ? 'ruta hi encaixa' : 'rutes hi encaixen'}</span>` : `${ICN('info', 15)}<span>Cap ruta exacta: et proposaré les que s'hi acostin més</span>`;
+      cnt.classList.toggle('warn', !n);
+      return n;
+    }
+    function refresh() {
+      const T = tokens(R.S); R.gen = textOf(T);
+      if (!R.edited) {
+        R.text = R.gen;
+        const marks = {};
+        txt.innerHTML = T.map(x => { if (!x.k) return esc(x.t); marks[x.k] = x.t; return `<mark data-k="${x.k}"${R.prevMarks[x.k] !== x.t ? ' class="new"' : ''}>${esc(x.t)}</mark>`; }).join('');
+        R.prevMarks = marks;
+      }
+      hint.hidden = !R.edited;
+      go.disabled = !R.text.trim();
+      return count(R.edited ? parse(R.text) : R.S);
+    }
+    function paint(c) { const on = c.getAttribute('aria-pressed') === 'true'; c.querySelector('span').innerHTML = (on ? ICN('check', 16) : '') + esc(c.textContent); }
+    function syncChips() {
+      pane.querySelectorAll('.chip[data-g]').forEach(c => {
+        const g = c.dataset.g, v = c.dataset.v, on = g === 'dur' || g === 'mun' ? R.S[g] === v : R.S[g].includes(v);
+        if ((c.getAttribute('aria-pressed') === 'true') !== on) { c.setAttribute('aria-pressed', on); paint(c); }
+      });
+    }
+    function toggle(c) {
+      const g = c.dataset.g, v = c.dataset.v; let on;
+      if (g === 'dur' || g === 'mun') { on = R.S[g] !== v; R.S[g] = on ? v : ''; }
+      else { const i = R.S[g].indexOf(v); on = i < 0; if (on) R.S[g].push(v); else R.S[g].splice(i, 1); }
+      syncChips();
+      const n = refresh();
+      say(R.edited ? 'Has editat el text: refés-lo per aplicar-hi les opcions.' : !on ? "D'acord, ho trec." : !n ? "Amb tot això no en trobo cap d'exacta; et proposaré les que s'hi acostin més." : g === 'mun' ? `${v}: conec bons racons per allà.` : SAY[g][v]);
+    }
+    function autosize() { inp.style.height = 'auto'; inp.style.height = Math.min(inp.scrollHeight + 2, 168) + 'px'; }
+    function setEditing(on) {
+      if (R.editing === on) return; R.editing = on;
+      if (on) {
+        inp.value = R.text; inp.hidden = false; txt.hidden = true; editB.innerHTML = `${ICN('check', 16)} Fet`; autosize(); inp.focus();
+        try { inp.setSelectionRange(inp.value.length, inp.value.length); } catch (e) { /* res */ }
+        say('Escriu-ho amb les teves paraules.');
+      } else {
+        const v = inp.value.replace(/\s+/g, ' ').trim();
+        R.edited = !!v && v !== R.gen; R.text = R.edited ? v : R.gen;
+        inp.hidden = true; txt.hidden = false; editB.innerHTML = `${ICN('pencil', 16)} Edita`;
+        if (R.edited) txt.textContent = R.text; else { R.prevMarks = {}; }
+        refresh(); inp.blur(); IOS.Keyboard.hide();
+      }
+    }
+    inp.addEventListener('input', () => { autosize(); go.disabled = !inp.value.trim(); count(parse(inp.value)); [R.m, R.mm].forEach(m => m && m.pulse()); });
+    function reset() {
+      R.S = blank(); R.edited = false; if (R.editing) { R.editing = false; inp.hidden = true; txt.hidden = false; editB.innerHTML = `${ICN('pencil', 16)} Edita`; }
+      R.prevMarks = {}; syncChips(); refresh(); sc.scrollTo({ top: 0, behavior: IOS.rm() ? 'auto' : 'smooth' });
+      say('Comencem de nou. Què et ve de gust?');
+    }
+
+    /* ---------- enviar al xat: la targeta es converteix en el missatge enviat ---------- */
+    async function send() {
+      if (R.busy) return;
+      if (R.editing) setEditing(false);
+      const text = (R.text || '').trim(), C = pg.chat; if (!text || !C) return;
+      if (Store.isGuest() && App.st.chat.filter(m => m.me).length >= 3) { App.needAccount("continuar parlant amb l'assistent (el mode convidat permet 3 missatges)"); return; }
+      R.busy = true; SENT.add(text); clearTimeout(R.mt);
+      if (R.m) R.m.set('celebrant', { restart: true });
+      R.mm.set('celebrant', { restart: true });
+      MascotUI.announce('Assistent: Perfecte! Ho cerco al xat.');
+      const ghost = IOS.rm() ? null : makeGhost(text);
+      const sw = open('xat');
+      await Promise.all([sw, ghost && ghost.appear]);
+      card.style.opacity = ''; card.style.transform = '';
+      for (let i = 0; C.busy && i < 80; i++) await wait(100);   // si encara respon el missatge anterior
+      C.inp.value = text; C.send.disabled = false;
+      await ChatAPI.submit(C);
+      if (ghost) await ghost.land(C, text);
+      [R.m, R.mm].forEach(m => m && m.set('repos'));
+      R.busy = false;
+    }
+    function makeGhost(text) {
+      const r = IOS.rectIn(card), s = IOS.rectIn(chatSc), w = s.w - 24;
+      const g = h(`<div class="chat aighost" aria-hidden="true" style="left:${s.x + 12}px;width:${w}px"><div class="mrow me"><div class="mb">${esc(text)}</div></div></div>`);
+      IOS.app.appendChild(g);
+      const gb = IOS.rectIn(g.querySelector('.mb'));
+      g.style.top = Math.max(r.y, r.y + r.h / 2 - gb.h / 2) + 'px';
+      const appear = Promise.all([
+        IOS.anim(g, [{ opacity: 0, transform: 'scale(.9)' }, { opacity: 1, transform: 'none' }], IOS.S.micro),
+        IOS.anim(card, [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'scale(.97)' }], IOS.fadeSp(180))
+      ]);
+      return {
+        appear,
+        async land(C, t) {
+          const rows = C.box.querySelectorAll('.mrow.me'), row = rows[rows.length - 1], mb = row && row.querySelector('.mb');
+          if (!mb || mb.textContent !== t) { await IOS.fade(g, 1, 0, 160); g.remove(); return; }
+          row.getAnimations().forEach(a => { try { a.finish(); } catch (e) { /* res */ } });
+          mb.style.visibility = 'hidden';
+          const gm = g.querySelector('.mb'), base = IOS.rectIn(gm), x = Spring.fn(0.32, 0.86, 0), D = 420, t0 = performance.now();
+          await new Promise(res => {
+            const step = now => {
+              const e = Math.min(1, (now - t0) / D), p = e >= 1 ? 1 : 1 - x((now - t0) / 1000), tg = IOS.rectIn(mb);
+              g.style.transform = `translate(${((tg.x - base.x) * p).toFixed(2)}px,${((tg.y - base.y) * p).toFixed(2)}px)`;
+              if (e < 1) requestAnimationFrame(step); else res();
+            };
+            requestAnimationFrame(step);
+          });
+          mb.style.visibility = ''; g.remove();
+        }
+      };
+    }
+
+    /* ---------- esdeveniments ---------- */
+    pane.addEventListener('click', e => {
+      const c = e.target.closest('.chip[data-g]'); if (c) { toggle(c); return; }
+      if (e.target.closest('[data-redit]')) { setEditing(!R.editing); return; }
+      if (e.target.closest('[data-rrestore]')) { R.edited = false; R.prevMarks = {}; if (R.editing) { R.editing = false; inp.hidden = true; txt.hidden = false; editB.innerHTML = `${ICN('pencil', 16)} Edita`; } refresh(); say('Fet! Torno a fer servir les teves opcions.'); return; }
+      if (e.target.closest('[data-rgo]')) send();
+    });
+    resetB.addEventListener('click', reset);
+    /* «Canvia les opcions» (a la resposta del xat) torna a aquesta pestanya amb les opcions triades */
+    el.addEventListener('click', e => { const s = e.target.closest('[data-say="Canvia les opcions"]'); if (s) { e.preventDefault(); e.stopImmediatePropagation(); open('ruta'); } }, true);
+
+    refresh();
+    pg.ai = { R, open, send, reset, edit: setEditing, pick(o) { R.S = Object.assign(blank(), clone(o)); syncChips(); return refresh(); } };
+  }
+})();
+
 /* ---- loading.js ---- */
 /* ===================== Pantalla de càrrega (1) i fluxos d'entrada =====================
    Mateixa animació que la versió corregida (v5): la fulla vola, la persona camina i neix el globus.
@@ -2721,7 +3075,7 @@ const Flow = (function () {
     o = o || {}; dest = o.first ? 'onb' : 'main'; exiting = false; gen++; seekT = null;
     cancelAnimationFrame(raf); IOS.Modal.clearAll(); IOS.Keyboard.hide();
     const sc = IOS.scenes.load;
-    sc.innerHTML = `<div class="ld-bg bg-load"></div><div class="ld-veil"></div><div class="ld-mist"></div><svg class="ld-svg" viewBox="0 0 393 852" width="393" height="852" role="img" aria-label="${CFG.label}"></svg><button type="button" class="ld-skip" aria-label="Ometre l'animació">Omet</button>`;
+    sc.innerHTML = `<div class="ld-bg bg-carrega"></div><div class="ld-veil"></div><div class="ld-mist"></div><svg class="ld-svg" viewBox="0 0 393 852" width="393" height="852" role="img" aria-label="${CFG.label}"></svg><button type="button" class="ld-skip" aria-label="Ometre l'animació">Omet</button>`;
     scene = new ValiaAnim.Scene(sc.querySelector('svg'), CFG);
     sc.querySelector('.ld-skip').addEventListener('click', () => { if (!exiting) exit(); });
     // la destinació es prepara a sota
@@ -2824,6 +3178,157 @@ const Flow = (function () {
   return { boot, cancel, toMain, afterSignup, toOnboarding, exit, seek, get scene() { return scene; }, cfg: CFG };
 })();
 
+/* ---- polish.js ---- */
+/* ===================== Valia · capa visual 2.0 (comportament només visual) =====================
+   - Colors de categoria, dificultat i estat a les etiquetes (afegeix atributs, no canvia el text)
+   - Entrada suau de les fotos quan acaben de carregar
+   - Xifres que compten fins al valor final (el text final és idèntic)
+   - Microinteraccions: xips, cors i desar
+   - Celebracions amb confeti en fites (canvi de punts, ruta desada, compte creat, check-in)
+   - Mode «?fotos»: mostra el nom de fitxer i la proporció de cada forat de foto
+   Tot respecta «Reduir moviment» i només anima transform i opacity (150–450 ms). */
+const Polish = (function () {
+  let app = null;
+  const rm = () => IOS.rm();
+  const CAT = { 'Natura': 'nat', 'Cultural': 'cul', 'Cultura': 'cul', 'Història': 'his', 'Patrimoni': 'his', 'BCIN': 'his', 'Gastronomia': 'gas', 'Circular': 'act' };
+  const DIF = { 'Fàcil': '1', 'Moderada': '2', 'Difícil': '3' };
+
+  /* ---------- etiquetes ---------- */
+  function decorate(root) {
+    root.querySelectorAll('.tag:not([data-cat]):not([data-dif])').forEach(t => {
+      const tx = t.textContent.trim();
+      if (CAT[tx]) t.dataset.cat = CAT[tx]; else if (DIF[tx]) t.dataset.dif = DIF[tx];
+    });
+    root.querySelectorAll('.stat:not([data-dif])').forEach(s => { const b = s.querySelector('b'); if (b && DIF[b.textContent.trim()]) s.dataset.dif = DIF[b.textContent.trim()]; });
+  }
+
+  /* ---------- fotos: la lluentor es fon quan la imatge ja és a punt ---------- */
+  function photos() {
+    // CSS: la miniatura borrosa (::before) es fon quan la foto definitiva ja ha carregat
+    const st = document.createElement('style'); document.head.appendChild(st);
+    st.textContent = Object.keys(PH).map(k => `.ios.ld-${k} .bg-${k}::before`).join(',') + '{opacity:0}';
+  }
+  /* càrrega a demanda: només es baixa una foto quan apareix a la pantalla per primer cop */
+  const asked = {}, byUrl = {};
+  Object.entries(PH).forEach(([k, url]) => { (byUrl[url] = byUrl[url] || []).push(k); });
+  function request(root) {
+    const els = root.querySelectorAll ? [root, ...root.querySelectorAll('[class*=" bg-"],[class^="bg-"]')] : [];
+    els.forEach(el => {
+      if (!el.classList) return;
+      el.classList.forEach(c => {
+        if (!c.startsWith('bg-')) return; const k = c.slice(3), url = PH[k]; if (!url || asked[url]) return; asked[url] = 1;
+        const im = new Image(); im.decoding = 'async';
+        im.onload = im.onerror = () => app.classList.add(...byUrl[url].map(x => 'ld-' + x));
+        im.src = url;
+      });
+    });
+  }
+
+  /* ---------- xifres que compten (només si el text és un nombre enter amb punts de milers) ---------- */
+  const NUMRE = /^\d{1,3}(\.\d{3})*$/;
+  function countUp(el) {
+    if (!el || rm() || el._counting) return;
+    const final = el.textContent.trim(); if (!NUMRE.test(final)) return;
+    const to = +final.replace(/\./g, ''); if (to < 10) return;
+    el._counting = true; const t0 = performance.now(), D = 450; let last = null;
+    const f = n => n.toLocaleString('ca-ES').replace(/\s/g, '.');
+    const fmtN = n => (typeof fmt === 'function' ? fmt(n) : f(n));
+    const step = now => {
+      if (last !== null && el.textContent !== last) { el._counting = false; return; }   // algú l'ha actualitzat: no el toquem
+      const p = Math.min(1, (now - t0) / D), e = 1 - Math.pow(1 - p, 3);
+      last = p < 1 ? fmtN(Math.round(to * e)) : final; el.textContent = last;
+      if (p < 1) requestAnimationFrame(step); else el._counting = false;
+    };
+    requestAnimationFrame(step);
+  }
+  /* portada de la fitxa: s'estira en tirar cap avall i es desplaça més lenta en pujar (paral·laxi) */
+  function parallax(pg) {
+    if (pg._plx) return; const sc = pg.el.querySelector(':scope > .scroll'), hero = pg.el.querySelector('.dhero'); if (!sc || !hero) return;
+    pg._plx = true; let rq = 0;
+    const upd = () => { rq = 0; if (rm()) { hero.style.transform = ''; return; } const y = sc.scrollTop, hh = hero.offsetHeight || 380;
+      hero.style.transform = y < 0 ? `scale(${(1 + -y / hh).toFixed(4)})` : (y < hh ? `translateY(${(y * 0.35).toFixed(1)}px)` : ''); };
+    sc.addEventListener('scroll', () => { if (!rq) rq = requestAnimationFrame(upd); }, { passive: true });
+  }
+  /* «Canvi fet»: fons ambiental amb la foto de la recompensa desenfocada */
+  function ambient(pg) {
+    if (pg.el.querySelector(':scope > .ambient')) return;
+    let k = null;
+    if (pg.id === 33) k = 'recompensa-' + (pg.params.id || 'bus');
+    if (!k || !PH[k]) return;
+    const d = document.createElement('div'); d.className = 'ambient bg-' + k; d.setAttribute('aria-hidden', 'true'); pg.el.prepend(d); request(d);
+  }
+  function onPage(pg) {
+    if (!pg || !pg.el) return;
+    if (pg.el.classList.contains('detail') && pg.el.querySelector('.dhero')) parallax(pg);
+    if (pg.id === 33) ambient(pg);
+    setTimeout(() => pg.el.querySelectorAll('[data-bal],[data-hbal],[data-pts]').forEach(countUp), 40);
+  }
+
+  /* ---------- microinteraccions ---------- */
+  const pop = (el, from) => { if (!el || rm()) return; IOS.anim(el, [{ transform: `scale(${from || 0.9})` }, { transform: 'scale(1)' }], Spring.spring(0.3, 0.55)); };
+  function burst(x, y, o) {   // petita explosió de punts (cors, desar, check-in)
+    if (rm()) return; o = o || {};
+    const fx = layer(), n = o.n || 8, cols = o.cols || ['#00A86B', '#16C083', '#5FD3A2'];
+    for (let i = 0; i < n; i++) {
+      const a = (i / n) * Math.PI * 2 + Math.random() * 0.4, r = (o.r || 26) + Math.random() * 10, d = document.createElement('i');
+      d.className = 'c'; d.style.background = cols[i % cols.length]; d.style.width = d.style.height = (o.s || 6) + 'px';
+      fx.appendChild(d);
+      d.animate([{ transform: `translate(${x}px,${y}px) scale(.4)`, opacity: 1 }, { transform: `translate(${x + Math.cos(a) * r}px,${y + Math.sin(a) * r}px) scale(1)`, opacity: 0 }], { duration: 420, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'forwards' }).finished.then(() => d.remove()).catch(() => d.remove());
+    }
+  }
+  let fxEl = null;
+  function layer() { if (!fxEl || !fxEl.isConnected) { fxEl = document.createElement('div'); fxEl.className = 'vfx'; fxEl.setAttribute('aria-hidden', 'true'); app.appendChild(fxEl); } return fxEl; }
+  /* confeti: cada peça dura 300–450 ms, amb sortides esglaonades (fins a 250 ms) */
+  function confetti(x, y, o) {
+    if (rm()) return; o = o || {};
+    const fx = layer(), n = o.n || 46, cols = ['#00A86B', '#16C083', '#5FD3A2', '#3BA0FF', '#0A63D6', '#FFC94D', '#FF8A4C', '#F4B400'];
+    for (let i = 0; i < n; i++) {
+      const d = document.createElement('i'); d.className = ['', 'c', 's'][i % 3]; d.style.background = cols[i % cols.length]; fx.appendChild(d);
+      const a = -Math.PI / 2 + (Math.random() - 0.5) * (o.spread || 2.4), v = (o.power || 150) * (0.55 + Math.random() * 0.6);
+      const dx = Math.cos(a) * v, dy = Math.sin(a) * v, rot = (Math.random() - 0.5) * 540, dur = 300 + Math.random() * 150;
+      d.animate([
+        { transform: `translate(${x}px,${y}px) rotate(0deg) scale(.6)`, opacity: 1 },
+        { transform: `translate(${x + dx}px,${y + dy}px) rotate(${rot / 2}deg) scale(1)`, opacity: 1, offset: 0.7 },
+        { transform: `translate(${x + dx * 1.15}px,${y + dy + 60}px) rotate(${rot}deg) scale(.9)`, opacity: 0 }
+      ], { duration: dur, delay: Math.random() * 250, easing: 'cubic-bezier(.15,.7,.3,1)', fill: 'both' }).finished.then(() => d.remove()).catch(() => d.remove());
+    }
+  }
+  const center = el => { const r = IOS.rectIn(el); return [r.x + r.w / 2, r.y + r.h / 2]; };
+
+  /* ---------- observador: decora el que entra i dispara celebracions ---------- */
+  const done = new WeakSet();
+  function watch() {
+    new MutationObserver(ms => {
+      for (const m of ms) for (const n of m.addedNodes) {
+        if (n.nodeType !== 1) continue;
+        decorate(n.parentNode || n); request(n);
+        const ok = n.matches && n.matches('.okring') ? n : n.querySelector && n.querySelector('.okring');
+        if (ok && !done.has(ok) && (done.add(ok), true)) setTimeout(() => { if (ok.isConnected) { const [x, y] = center(ok); confetti(x, y, { n: 54, power: 170 }); } }, 260);
+        if (n.classList && n.classList.contains('toast') && !done.has(n)) { done.add(n);
+          const tx = n.textContent;
+          if (/\+\d+ punts|Compte creat|Ruta desada|Canvi fet/.test(tx)) setTimeout(() => { if (n.isConnected) { const [x, y] = center(n); confetti(x, y + 12, { n: 28, power: 110, spread: 2.0 }); } }, 120);
+        }
+      }
+    }).observe(app, { childList: true, subtree: true });
+    // xips, cors i desar
+    app.addEventListener('click', e => {
+      const c = e.target.closest('.chip'); if (c) requestAnimationFrame(() => pop(c.firstElementChild, 0.9));
+      const f = e.target.closest('[data-fav],[data-save]');
+      if (f) requestAnimationFrame(() => requestAnimationFrame(() => { if (f.getAttribute('aria-pressed') === 'true') { const [x, y] = center(f); burst(x, y, { n: 8, cols: ['#FF5A6E', '#FF8A4C', '#00A86B'] }); } }));
+      const sw = e.target.closest('.sw'); if (sw) requestAnimationFrame(() => { if (sw.getAttribute('aria-checked') === 'true') pop(sw, 0.94); });
+    }, true);
+  }
+
+  function init(el) {
+    app = el;
+    if (/[?&]fotos\b/.test(location.search)) app.classList.add('slots');
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) IOS.set('rm', true);
+    photos(); decorate(app); request(app); watch();
+    App.hook(pg => onPage(pg));
+  }
+  return { init, confetti, burst, countUp };
+})();
+
 /* ---- main.js ---- */
 /* ===================== Arrencada de la PWA =====================
    Mòbil (amplada < 700 px): l'app ocupa tota la pantalla. Es manté l'amplada lògica de 393 pt i s'escala
@@ -2834,6 +3339,7 @@ const Flow = (function () {
   const device = Math.min(window.innerWidth, screen.width || 9999) < 700;
   root.classList.add(device ? 'device' : 'framed');
   IOS.init(app);
+  Polish.init(app);   // capa visual 2.0
   if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) IOS.set('rm', true);
 
   /* zones segures reals (notch, illa dinàmica, indicador d'inici) mesurades en px CSS */
@@ -2861,7 +3367,7 @@ const Flow = (function () {
     phone.style.transform = `translateY(${top}px) scale(${s})`;
     app.style.setProperty('--safe-t', st.toFixed(1) + 'px');
     app.style.setProperty('--safe-b', sb.toFixed(1) + 'px');
-    app.style.setProperty('--tab-h', (49 + sb).toFixed(1) + 'px');
+    // --tab-h es calcula al CSS a partir de --safe-b (barra de pestanyes flotant)
     app.style.setProperty('--H', h.toFixed(1) + 'px'); app.style.setProperty('--s', s.toFixed(4));
     app.classList.toggle('kbd-on', kbd);
     IOS.setH(h); IOS.setSafeT(st);
