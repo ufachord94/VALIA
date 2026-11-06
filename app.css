@@ -1256,6 +1256,147 @@
 .ios .fab5:active{transform:translateY(3px) scale(.97);box-shadow:0 1px 0 #000,0 8px 16px -10px rgba(0,0,0,.6)}
 .ios.kbd-on .fab5{display:none}
 
+/* ===================== Valia v5.1 · retocs de qualitat =====================
+   1 títols en majúscules · 2 foto difuminada a Recompenses · 3 Configuració ampliada
+   4 Inici sense fallades · 5 sense zona blanca en arribar al límit · 7 correccions de l'auditoria */
+
+/* ---------- 5 · sense rebot ni zona blanca ---------- */
+html,body{overscroll-behavior:none}
+:root.device,:root.device body{background:#F4F3EC}
+:root.device.th-dark,:root.device.th-dark body{background:#0D1210}
+:root.framed.th-dark,:root.framed.th-dark body{background:#1A1F1C}
+.ios{background:var(--bg)}
+.ios .page > .scroll,.ios .sheet .sbody,.ios .aiscroll,.ios .dk-scroll,.ios .chat .scroll{overscroll-behavior:none}
+.ios .scrollx,.ios .acc .acc-car,.ios .chips,.ios .h5-near{overscroll-behavior-x:none}
+
+/* ---------- 1 · títols principals en majúscules (mida fluida, mai tallats) ---------- */
+.ios .page{container-type:inline-size}
+.ios .lt,.ios .ltitle,.ios .page.dark .t1,.ios .page.onbpg h1.t1,.ios .page.onb5 h1.t1,.ios .page.ok5 h1,.ios .acc .acc-tx h2,.ios .h5-hi,.ios .p5-cover h1,.ios .dh5 h1,.ios .page.grouped > .scroll > .px > h1.t1,.ios .page > .scroll > .px > h1.t1:first-child{
+  text-transform:uppercase;letter-spacing:.035em!important;line-height:1.04!important;overflow-wrap:break-word;hyphens:manual;text-wrap:balance}
+.ios .lt,.ios .ltitle{font-size:calc(clamp(28px,9cqi,36px)*var(--dtL,1))!important}
+.ios .page.onbpg h1.t1,.ios .page.onb5 h1.t1,.ios .page > .scroll > .px > h1.t1:first-child{font-size:calc(clamp(26px,8.4cqi,33px)*var(--dtL,1))!important}
+/* inici de sessió i registre: els més grans */
+.ios .page.dark .t1{font-size:calc(clamp(30px,10cqi,40px)*var(--dtL,1))!important;letter-spacing:.03em!important;margin-top:4px}
+.ios .acc .acc-tx h2{font-size:clamp(25px,8cqi,31px)!important}
+.ios .page.ok5 h1{font-size:calc(clamp(28px,9cqi,36px)*var(--dtL,1))!important}
+.ios .h5-hi{font-size:clamp(28px,9cqi,36px)}
+.ios .p5-cover h1{font-size:calc(clamp(26px,8.4cqi,34px)*var(--dtL,1))!important}
+.ios .dh5 h1{font-size:calc(clamp(24px,8cqi,32px)*var(--dtL,1))!important}
+/* títol que no hi cap ni partint per paraules: el JS (v51.js) el redueix fins que hi cap */
+.ios .fit51{white-space:normal}
+
+/* ---------- 2 · Recompenses: foto real difuminada dins el cercle de punts ---------- */
+.r5-in{overflow:hidden;isolation:isolate}
+.r5-in .r5-ph{position:absolute;inset:-14px;z-index:-2;background-size:cover;filter:blur(5px) saturate(1.15);transform:scale(1.12)}
+.r5-in::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:50%;background:radial-gradient(circle at 50% 45%,rgba(255,248,230,.72) 0,rgba(255,248,230,.64) 60%,rgba(255,244,220,.54) 100%)}
+.r5-in{background:#FFF8E6}
+.ios.th-dark .r5-in::before{background:radial-gradient(circle at 50% 45%,rgba(20,15,4,.64) 0,rgba(20,15,4,.56) 60%,rgba(20,15,4,.48) 100%)}
+.ios.th-dark .r5-in svg{color:#FFC85C}
+.ios .r5-in span:not(.pimg){color:#4A3A12}
+.ios.th-dark .r5-in span:not(.pimg){color:#F3E6C4}
+
+/* ---------- 3 · Configuració ---------- */
+.ios .set51 .gtitle{margin-top:26px}
+.ios .set51 .gtitle:first-of-type{margin-top:8px}
+.ios .set51 .grow .gv{color:var(--label2);font-size:15px;max-width:42%;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:none}
+.ios .set51 .grow .gl51{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.ios .set51 .grow .gl51 .bd{overflow-wrap:anywhere}
+.ios .set51 .grow .gl51 .fn{color:var(--label2);line-height:1.3}
+.ios .set51 .grow.red51 .bd{color:#D92D20}
+.ios.th-dark .set51 .grow.red51 .bd{color:#FF8A80}
+.ios .set51 .prof51{display:flex;align-items:center;gap:14px;padding:14px 16px}
+.ios .set51 .prof51 .av51{width:56px;height:56px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--f-d);font-weight:600;font-size:24px;color:#0F1B15;background:var(--g-corall)}
+.ios .set51 .prof51 .f1{min-width:0}
+.ios .set51 .prof51 .hd,.ios .set51 .prof51 .fn{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ios .set51 .gfoot{line-height:1.4}
+.ios .opt51{display:flex;flex-direction:column;gap:0}
+.ios .opt51 button{display:flex;align-items:center;gap:12px;min-height:52px;padding:10px 16px;text-align:left;font:inherit;color:var(--label);background:none;border:0;border-bottom:1px solid var(--sep)}
+.ios .opt51 button:last-child{border-bottom:0}
+.ios .opt51 button .f1{flex:1;min-width:0}
+.ios .opt51 button .ck{color:var(--tint-tx);opacity:0}
+.ios .opt51 button[aria-checked="true"] .ck{opacity:1}
+.ios .form51{display:flex;flex-direction:column;gap:12px}
+.ios .form51 label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:var(--label2)}
+.ios .form51 input{height:52px;border-radius:16px;border:1px solid var(--hair);background:var(--card);color:var(--label);padding:0 14px;font:inherit;font-size:17px}
+.ios .form51 .err51{color:#D92D20;font-size:13px;min-height:18px;margin:0}
+.ios.th-dark .form51 .err51{color:#FF8A80}
+.ios .about51 .row{justify-content:space-between;gap:12px}
+.ios .about51 dl{margin:0}
+.ios .about51 dt{font-weight:600;margin-top:12px}
+.ios .about51 dd{margin:2px 0 0;color:var(--label2);line-height:1.4}
+/* tutorial */
+.ios .tut51{position:absolute;inset:0;display:flex;flex-direction:column;padding:calc(var(--safe-t) + 12px) 24px calc(var(--safe-b) + 18px);background:radial-gradient(120% 70% at 50% 0,#163B2B 0,#0D1210 70%);color:#fff}
+.ios .tut51 .tut-top{display:flex;justify-content:space-between;align-items:center;min-height:44px}
+.ios .tut51 .tut-dots{display:flex;gap:6px}
+.ios .tut51 .tut-dots i{width:8px;height:8px;border-radius:4px;background:rgba(255,255,255,.3);transition:width .3s,background .3s}
+.ios .tut51 .tut-dots i.on{width:22px;background:#3DDC97}
+.ios .tut51 .tut-skip{min-height:44px;padding:0 12px;border:0;background:none;color:rgba(255,255,255,.78);font:inherit;font-weight:600}
+.ios .tut51 .tut-mas{width:150px;height:170px;margin:18px auto 6px}
+.ios .tut51 .tut-ic{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;margin:0 auto 14px;background:rgba(255,255,255,.1)}
+.ios .tut51 h2{font-family:var(--f-d);font-weight:600;text-transform:uppercase;letter-spacing:.035em;font-size:clamp(22px,7.4cqi,28px);line-height:1.08;text-align:center;margin:0;text-wrap:balance}
+.ios .tut51 p{margin:12px 0 0;text-align:center;font-size:17px;line-height:1.45;color:rgba(255,255,255,.86)}
+.ios .tut51 .tut-body{flex:1;display:flex;flex-direction:column;justify-content:center}
+.ios .tut51 .btn{width:100%}
+
+/* ---------- 4 · Inici: recuadres sòlids en els 4 idiomes ----------
+   Els recuadres són <button>: el reinici «.ios button» els treia el fons, el farcit i el color.
+   Aquí es tornen a declarar amb prou especificitat; alçada mínima en lloc d'alçada fixa. */
+.ios .bento5{grid-auto-rows:minmax(160px,auto);align-items:stretch}
+.ios .bento5 .bt5{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:4px;min-height:160px;height:auto;padding:16px;border-radius:26px;text-align:left;color:#0F1B15;overflow:hidden;box-sizing:border-box;box-shadow:var(--sh1)}
+.ios .bento5 .bt5 > *{min-width:0;max-width:100%}
+.ios .bento5 .bt5-pts{background:var(--g-sol)}
+.ios .bento5 .bt5-pts .bt5-k{padding-right:70px}
+.ios .bento5 .bt5-pts .bt5-v{white-space:nowrap;overflow-wrap:normal;font-size:38px}
+.ios .bento5 .bt5-pts .bt5-ring{position:absolute;right:14px;top:14px;max-width:none}
+.ios .bento5 .bt5-streak{background:var(--g-corall)}
+.ios .bento5 .bt5-co2{background:#D7F2E3}
+.ios .bento5 .bt5-lvl{background:#fff}
+.ios .bento5 .bt5-chal{grid-column:1/-1;min-height:176px;color:#fff;background:#1E2924;justify-content:flex-end}
+.ios.th-dark .bento5 .bt5-lvl{background:var(--card);color:var(--ink)}
+.ios.th-dark .bento5 .bt5-co2{background:#123326;color:var(--ink)}
+.ios .bento5 .bt5-k{display:flex;align-items:center;gap:6px;line-height:1.25;font-size:13px;font-weight:700;overflow-wrap:anywhere}
+.ios .bento5 .bt5-v{margin-top:auto;overflow-wrap:anywhere;line-height:1.02}
+.ios .bento5 .bt5-v2{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:24px;line-height:1.08;padding-bottom:2px}
+.ios .bento5 .bt5-s{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;line-height:1.3}
+.ios .bento5 .bt5-ic{margin-bottom:6px}
+.ios .bento5 .dots5{margin-top:8px}
+.ios .bento5 .bdg5{flex-direction:row;flex-wrap:wrap;align-items:center;text-align:left;gap:4px;margin-top:8px}
+.ios .bento5 .bt5-lvl .bar5{width:100%;margin:8px 0 4px}
+.ios .bento5 .bt5-chal .bar5{width:100%}
+.ios .h5-feat-t{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;padding-bottom:3px}
+.ios .h5-near .h5-nc-hit{display:flex;flex-direction:column;justify-content:flex-end;padding:12px;color:#fff;background:#1E2924;text-align:left;border-radius:24px}
+.ios .h5-nc-t{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;padding-bottom:2px}
+.ios .h5-bub{overflow-wrap:break-word}
+.ios .h5-acts .btn{min-width:0;white-space:normal;text-align:center;line-height:1.15}
+
+/* ---------- Preferències que funcionen ---------- */
+.ios.hc51{--label2:var(--ink);--label3:var(--label);--hair:rgba(0,0,0,.35);--sep:rgba(0,0,0,.3)}
+.ios.th-dark.hc51{--hair:rgba(255,255,255,.4);--sep:rgba(255,255,255,.35)}
+.ios.mapdk51 .map > svg{filter:invert(.9) hue-rotate(180deg) saturate(.75) brightness(.95)}
+.ios .nw51{white-space:nowrap}
+.ios p .lnk{display:inline;text-align:left}
+/* ---------- 7 · correccions de l'auditoria ---------- */
+/* xat: targetes de ruta sense franges buides (el botó centrava el contingut) */
+.ios .chatcard{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;text-align:left;height:auto}
+.ios .chatcard > .pimg{flex:none;height:150px!important}
+/* xat: el botó d'enviar quedava tallat a la dreta */
+.ios .composer .field{flex:1 1 auto;min-width:0;width:auto}
+.ios .composer [data-send]{flex:none}
+/* ruta en curs: el botó no aixafa el text del proper check-in */
+.ios .nextc .f1{min-width:0}
+.ios .nextc [data-nn]{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ios .nextc .btn{flex:0 1 auto;max-width:48%;white-space:normal;line-height:1.15;text-align:center}
+/* barra de navegació: el text del botó enrere i el títol mai no es trepitgen */
+.ios .navbtn.back{max-width:104px}
+.ios .nav .nt{max-width:184px}
+/* títols amb límit de línies: interlineat suficient perquè no es retallin els accents ni les majúscules */
+.ios .h5-feat-t{line-height:1.14;padding-top:2px}
+.ios .bento5 .bt5-v2{line-height:1.14;padding-top:2px}
+.ios .h5-nc-t{line-height:1.16;padding-top:2px}
+/* mode fosc: les pantalles de benvinguda (interessos, ubicació, avisos, privacitat) tenien la franja superior clara */
+.ios.th-dark .page.onb5 > .scroll{background:linear-gradient(180deg,#0F2A1F 0,var(--bg) 58%) no-repeat local}
+.ios.th-dark{--acc-tx:#3DDC97;--acc-soft:#123326}
+
 .ios .tile[data-rw="bus"]{background-image:linear-gradient(180deg,rgba(6,10,8,.30) 0,rgba(6,10,8,.20) 35%,rgba(6,10,8,.86) 100%),url("img/placa-esglesia-escultura.webp");background-position:50% 50%,40% 78%}
 .ios .tile[data-rw="bici"]{background-image:linear-gradient(180deg,rgba(6,10,8,.30) 0,rgba(6,10,8,.20) 35%,rgba(6,10,8,.86) 100%),url("img/btt-torre-cim.webp");background-position:50% 50%,58% 68%}
 .ios .tile[data-rw="esmorzar"]{background-image:linear-gradient(180deg,rgba(6,10,8,.30) 0,rgba(6,10,8,.20) 35%,rgba(6,10,8,.86) 100%),url("img/restaurant.webp");background-position:50% 50%,38% 50%}

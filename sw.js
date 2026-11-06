@@ -1,6 +1,6 @@
-/* Valia · service worker: l'app funciona sense connexió un cop oberta. Versió f4930093dd */
-const CACHE = 'valia5-f4930093dd';
-const ASSETS = ["./", "index.html", "guia.html", "qr.js", "app.css?v=f4930093dd", "app.js?v=f4930093dd", "manifest.webmanifest", "img/btt-torre-cim.webp", "img/castell.webp", "img/ciclistes-tardor-platans.webp", "img/esglesia-turo.webp", "img/excursionista-muntanya.webp", "img/familia-cistells.webp", "img/placa-esglesia-escultura.webp", "img/poble-horts.webp", "img/restaurant.webp", "img/riera-tardor.webp", "img/ruines-montseny.webp", "img/sant-miquel-del-fai.webp", "img/torre-bandera.webp", "icons/apple-touch-icon.png", "icons/favicon-32.png", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png", "icons/icon.svg", "icons/logo.svg"];
+/* Valia · service worker: l'app funciona sense connexió un cop oberta. Versió c142afccd1 */
+const CACHE = 'valia5-c142afccd1';
+const ASSETS = ["./", "index.html", "guia.html", "qr.js", "app.css?v=c142afccd1", "app.js?v=c142afccd1", "manifest.webmanifest", "img/btt-torre-cim.webp", "img/castell.webp", "img/ciclistes-tardor-platans.webp", "img/esglesia-turo.webp", "img/excursionista-muntanya.webp", "img/familia-cistells.webp", "img/placa-esglesia-escultura.webp", "img/poble-horts.webp", "img/restaurant.webp", "img/riera-tardor.webp", "img/ruines-montseny.webp", "img/sant-miquel-del-fai.webp", "img/torre-bandera.webp", "icons/apple-touch-icon.png", "icons/favicon-32.png", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png", "icons/icon.svg", "icons/logo.svg"];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('valia5-') && k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', e => {
