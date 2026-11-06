@@ -967,7 +967,7 @@ const IOS = (function () {
       const kids = [...pg.scroll.children].filter(c => !c.contains(tgt)).slice(0, 6);
       kids.forEach(k2 => { k2.style.opacity = 0; });
       pg.el.style.background = 'transparent'; pg.el.style.opacity = 1;
-      const bg = h('<div style="position:absolute;inset:0;background:#fff;opacity:0;z-index:0"></div>'); pg.el.prepend(bg);
+      const bg = h('<div style="position:absolute;inset:0;background:var(--bg);opacity:0;z-index:0"></div>'); pg.el.prepend(bg);
       await Promise.all([
         anim(clone, [{ transform: 'translate(0,0) scale(1)', opacity: 1 }, { transform: `translate(${dx}px,${dy}px) scale(${k})`, opacity: 1, offset: 0.55 }, { transform: `translate(${dx}px,${dy}px) scale(${k})`, opacity: 0 }], S.hero),
         anim(tgt, [{ opacity: 0, transform: 'scale(1.04)' }, { opacity: 1, transform: 'scale(1)' }], S.hero),
@@ -1954,7 +1954,7 @@ const actImg = (a, style, extra) => a.img
       <div class="chips scrollx" style="margin-top:8px;margin-bottom:4px" data-qf>${['Tot', 'Natura', 'Cultural', 'Història', 'Gastronomia'].map((t, i) => chip(t, i === 0, `data-qf="${t}"`)).join('')}</div>
       <p class="fn mut" style="margin:4px 0 12px" data-n role="status"></p>
       <div class="col" style="gap:24px" data-res></div>
-      <p class="fn mut" style="margin-top:18px">Llocs reals del Vallès Oriental. Durades, distàncies i desnivells: dades d'exemple. Fotos provisionals.</p></div>`,
+      <p class="fn mut" style="margin-top:18px">Llocs reals del Vallès Oriental. Durades, distàncies i desnivells: dades d'exemple. Fotos reals il·lustratives.</p></div>`,
     mount(el, p, pg) {
       const res = el.querySelector('[data-res]'), q = el.querySelector('[data-q]'), nEl = el.querySelector('[data-n]'); let typ = 0;
       pg.ex = { el, res, q };
@@ -2404,7 +2404,7 @@ const Route = (function () {
       <section class="px" id="p-routes"><button type="button" class="yearban cc press" data-year><span>${ICN('sparkle', 22, '#1FD08A')}</span><span class="f1" style="text-align:left"><span class="hd" style="display:block;color:#fff">El teu any amb Valia</span><span class="fn" style="color:rgba(255,255,255,.8)" data-yearsub></span></span>${ICN('chevR', 18, '#fff')}</button>
         <h2 class="t2" style="margin:26px 0 10px">Les teves rutes</h2>${seg(['Fetes', 'Desades'], 0, 'rt')}<div data-rlist style="margin-top:12px"></div>
         <button type="button" class="btn out" data-logout style="margin-top:28px">${ICN('out', 20)} Tancar la sessió</button>
-        <p class="fn mut" style="margin-top:12px">Fotos de llocs provisionals (composicions fetes per programa).</p></section>`,
+        <p class="fn mut" style="margin-top:12px">Fotos reals de llocs del Vallès (il·lustratives, no sempre del punt exacte).</p></section>`,
     mount(el, p, pg) {
       const segs = el.querySelectorAll('.segc');
       IOS.segmented(segs[0], i => { el._per = i; stats(el); });
@@ -3058,6 +3058,295 @@ const Route = (function () {
 
     refresh();
     pg.ai = { R, open, send, reset, edit: setEditing, pick(o) { R.S = Object.assign(blank(), clone(o)); syncChips(); return refresh(); } };
+  }
+})();
+
+/* ---- v5.js ---- */
+/* ===================== Valia v5 · «Bosc viu» =====================
+   Redisseny profund sobre les mateixes funcions:
+   - pestanya nova «Inici» (graella bento) i barra de pestanyes flotant amb indicador que llisca;
+   - un color d'accent per secció (IA lila, Explorar blau riu, Recompenses groc sol, Perfil corall, Ajustos pissarra);
+   - Perfil i Recompenses amb composició nova (anells de progrés, nivell, ratxa i insígnies);
+   - mode fosc real (Accessibilitat → Aparença) i skeletons, confeti i reaccions de la mascota.
+   La gamificació és només una capa visual calculada a partir de les dades que l'app ja desa. */
+(function () {
+  const SC = IOS.SCREENS, h = IOS.h;
+  const D = () => Store.cur();
+  const kmTx = v => String(Math.round((v || 0) * 10) / 10).replace('.', ',');
+  const ACC = { inici: '#00A86B', xat: '#7C5CFF', explorar: '#2E9BF0', recompenses: '#FFB21A', perfil: '#FF7452' };
+
+  /* ---------- gamificació visual ---------- */
+  const LEVELS = [{ n: 'Llavor', p: 0 }, { n: 'Brot', p: 300 }, { n: 'Plançó', p: 900 }, { n: 'Arbust', p: 2000 }, { n: 'Arbre', p: 4000 }, { n: 'Bosc', p: 8000 }];
+  function xpOf(d) { const earned = (d.routes || []).reduce((s, r) => s + (r.pts || 0), 0); return Math.max(earned, d.points || 0); }
+  function level(d) {
+    const x = xpOf(d); let i = 0; LEVELS.forEach((l, k) => { if (x >= l.p) i = k; });
+    const cur = LEVELS[i], nx = LEVELS[i + 1];
+    return { i: i + 1, n: cur.n, x, next: nx, pct: nx ? Math.round((x - cur.p) / (nx.p - cur.p) * 100) : 100, left: nx ? nx.p - x : 0 };
+  }
+  const W = 7 * 864e5;
+  function weekStart(t) { const d = new Date(t); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() - ((d.getDay() + 6) % 7)); return +d; }
+  function streak(d) {
+    const R = d.routes || [], mon = weekStart(Date.now()); let n = 0;
+    for (let k = 0; k < 104; k++) { const a = mon - k * W, has = R.some(r => r.ts >= a && r.ts < a + W); if (has) n++; else if (k > 0) break; }
+    return n;
+  }
+  function weekDots(d) { const mon = weekStart(Date.now()), R = d.routes || []; return [0, 1, 2, 3, 4, 5, 6].map(i => R.some(r => r.ts >= mon + i * 864e5 && r.ts < mon + (i + 1) * 864e5)); }
+  function badges(d) {
+    const s = streak(d), n = (d.routes || []).length;
+    return [
+      { ic: 'sprout', t: 'Primera ruta', ok: n >= 1 },
+      { ic: 'train', t: '10 km sense cotxe', ok: (d.km || 0) >= 10 },
+      { ic: 'leaf', t: '10 kg de CO₂', ok: (d.co2 || 0) >= 10 },
+      { ic: 'landmark', t: '5 llocs de patrimoni', ok: (d.places || 0) >= 5 },
+      { ic: 'pin', t: '10 check-ins', ok: (d.checkins || 0) >= 10 },
+      { ic: 'bolt', t: 'Ratxa de 3 setmanes', ok: s >= 3 },
+      { ic: 'shop', t: 'Primer canvi al comerç', ok: (d.coupons || []).length >= 1 },
+      { ic: 'compass', t: '5 rutes fetes', ok: n >= 5 }
+    ];
+  }
+  const goalR = () => { const d = D(); return (window.REWARDS || []).find(r => r.id === d.goal) || null; };
+  /* anell de progrés (SVG petit) */
+  function ring(pct, size, sw, col, track, extra) {
+    const r = (size - sw) / 2, c = 2 * Math.PI * r, off = c * (1 - Math.max(0, Math.min(100, pct)) / 100);
+    return `<svg class="ring5" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" aria-hidden="true" ${extra || ''}><circle cx="${size / 2}" cy="${size / 2}" r="${r}" fill="none" stroke="${track}" stroke-width="${sw}"/><circle class="ring5-v" cx="${size / 2}" cy="${size / 2}" r="${r}" fill="none" stroke="${col}" stroke-width="${sw}" stroke-linecap="round" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}" data-c="${c.toFixed(1)}" data-off="${off.toFixed(1)}" transform="rotate(-90 ${size / 2} ${size / 2})"/></svg>`;
+  }
+  function playRings(root) {
+    if (IOS.rm()) return;
+    root.querySelectorAll('.ring5-v').forEach(c => { const C = +c.dataset.c, off = +c.dataset.off; c.animate([{ strokeDashoffset: C }, { strokeDashoffset: off }], { duration: 900, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'backwards', delay: 120 }); });
+  }
+    window.V5 = { level, streak, badges, ring, playRings };
+
+  /* ---------- pestanya nova: Inici ---------- */
+  const hello = () => { const hh = new Date().getHours(); return hh < 6 ? 'Bona nit' : hh < 14 ? 'Bon dia' : hh < 20 ? 'Bona tarda' : 'Bona nit'; };
+  const today = () => { const s = new Date().toLocaleDateString('ca-ES', { weekday: 'long', day: 'numeric', month: 'long' }); return s.charAt(0).toUpperCase() + s.slice(1); };
+  const pick = () => { const L = ACTS.filter(a => a.img), doy = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0)) / 864e5); return L[doy % L.length]; };
+  SC.home = {
+    title: 'Inici', tabbar: true, cls: 'home5', navCls: 'h5nav', scrollThreshold: 70,
+    navRight: () => `<button type="button" class="navbtn press" data-h5prof aria-label="El teu perfil">${ICN('user', 22)}</button>`,
+    render: () => {
+      const a = pick(), near = ACTS.filter(x => x.img && x.id !== a.id).slice(0, 6);
+      return `<div class="h5">
+      <header class="h5-top"><p class="h5-date" data-h5date>${today()}</p><h1 class="h5-hi"><span data-h5hello>${hello()}</span>,<br><span class="h5-name" data-h5name>Unai</span></h1></header>
+      <section class="h5-hero cc" aria-label="Assistent">
+        <div class="h5-mas" data-h5mas></div>
+        <div class="h5-say"><p class="h5-bub" data-h5bub>Què explorem avui? T'ajudo a trobar una ruta a prop.</p>
+          <div class="h5-acts"><button type="button" class="btn sm press" data-h5ia>${ICN('msg', 18)} Pregunta-m'ho</button><button type="button" class="btn sm ghost5 press" data-h5ruta>${ICN('sliders', 18)} Ruta a mida</button></div></div>
+      </section>
+      <div class="h5-sh"><h2 class="h5-sec">Proposta del dia</h2><button type="button" class="tbtn" data-h5all>Veure-les totes</button></div>
+      <article class="h5-feat cc" data-act-id="${a.id}"><button type="button" class="h5-feat-hit" data-h5open aria-label="${esc(a.t)}: obrir el detall">${actImg(a, 'position:absolute;inset:-24px 0;height:auto', 'data-hsrc data-par')}</button>
+        <div class="h5-feat-tx"><span class="tag5">${ICN(a.act === 'Bici' ? 'bike' : a.act === 'Córrer' ? 'bolt' : 'walk', 14)} ${a.act} · ${a.dif}</span><h3 class="h5-feat-t">${a.t}</h3><p class="h5-feat-s">${a.sub}</p><p class="h5-feat-m">${a.m.join(' · ')}</p></div></article>
+      <div class="bento5">
+        <button type="button" class="bt5 bt5-pts press" data-h5pts aria-label="Punts d'energia: obrir Recompenses"><span class="bt5-ring" data-h5ring></span><span class="bt5-k">Punts</span><b class="bt5-v" data-h5pts-v>0</b><span class="bt5-s" data-h5goal></span></button>
+        <button type="button" class="bt5 bt5-streak press" data-h5streak aria-label="Ratxa setmanal: obrir el perfil"><span class="bt5-ic">${ICN('bolt', 22)}</span><span class="bt5-k">Ratxa</span><b class="bt5-v" data-h5st>0</b><span class="bt5-s" data-h5stl>setmanes</span><span class="dots5" data-h5dots></span></button>
+        <button type="button" class="bt5 bt5-co2 press" data-h5co2 aria-label="Impacte: obrir el perfil"><span class="bt5-ic">${ICN('leaf', 22)}</span><span class="bt5-k">CO₂ estalviat</span><b class="bt5-v" data-h5co2v>0</b><span class="bt5-s">kg · estimació</span></button>
+        <button type="button" class="bt5 bt5-lvl press" data-h5lvl aria-label="Nivell i insígnies: obrir el perfil"><span class="bt5-k">Nivell <b data-h5lvln>1</b></span><b class="bt5-v bt5-v2" data-h5lvl-n>Llavor</b><span class="bar5"><i data-h5lvlbar></i></span><span class="bt5-s" data-h5lvll></span><span class="bdg5" data-h5bdg></span></button>
+        <button type="button" class="bt5 bt5-chal press" data-h5chal aria-label="Reptes de grup">${photo('repte-1', 'position:absolute;inset:0', '52% 58%')}<span class="bt5-sc"></span><span class="bt5-k">Reptes de grup</span><b class="bt5-v bt5-v2">Entre tots, 15.000 kg</b><span class="bar5 lt"><i style="width:83%"></i></span><span class="bt5-s">Xifra comunitària d'exemple</span></button>
+      </div>
+      <div class="h5-sh"><h2 class="h5-sec">A prop teu</h2><button type="button" class="tbtn" data-h5map>Mapa</button></div>
+      <div class="h5-near scrollx" role="list">${near.map(n => `<article class="h5-nc" role="listitem" data-act-id="${n.id}"><button type="button" class="h5-nc-hit press" data-h5open aria-label="${esc(n.t)}: obrir el detall">${actImg(n, 'position:absolute;inset:0;height:auto', 'data-hsrc')}<span class="h5-nc-sc"></span><span class="h5-nc-t">${n.t}</span><span class="h5-nc-s">${n.mun} · ${n.m[0]}</span></button></article>`).join('')}</div>
+      <p class="fn mut h5-foot">Llocs reals del Vallès Oriental amb fotos reals. Xifres de punts, impacte i reptes: dades d'exemple.</p>
+    </div>`; },
+    mount(el, p, pg) {
+      pg.h5m = Mascot.create(el.querySelector('[data-h5mas]'), { size: 112, state: 'saludant', label: 'Assistent de Valia' });
+      pg.h5m.el.style.color = '#fff';
+      el.addEventListener('click', e => {
+        const o = e.target.closest('[data-h5open]'); if (o) { const id = o.closest('[data-act-id]').dataset.actId, hs = o.querySelector('[data-hsrc]'); pg.stack.push(17, { id }, hs ? { hero: { src: hs, target: '[data-hero]' } } : {}); return; }
+        if (e.target.closest('[data-h5ia]')) { App.switchTab('xat'); const t = App.stack('xat').top; t && t.ai && t.ai.open('xat'); return; }
+        if (e.target.closest('[data-h5ruta]')) { App.switchTab('xat'); setTimeout(() => { const t = App.stack('xat').top; t && t.ai && t.ai.open('ruta'); }, 60); return; }
+        if (e.target.closest('[data-h5pts]')) { App.switchTab('recompenses'); return; }
+        if (e.target.closest('[data-h5streak],[data-h5co2],[data-h5lvl],[data-h5prof]')) { App.switchTab('perfil'); return; }
+        if (e.target.closest('[data-h5chal]')) { App.switchTab('perfil'); App.stack('perfil').push(42); return; }
+        if (e.target.closest('[data-h5all]')) { App.switchTab('explorar'); return; }
+        if (e.target.closest('[data-h5map]')) { App.switchTab('explorar'); App.stack('explorar').push(16); return; }
+      });
+      /* parallax de la foto destacada: només transform */
+      const par = el.querySelector('[data-par]'), feat = el.querySelector('.h5-feat');
+      pg.scroll.addEventListener('scroll', () => { if (IOS.rm() || !par || !feat) return; const r = IOS.rectIn(feat), y = Math.max(-24, Math.min(24, (r.y - 260) * -0.12)); par.style.transform = `translate3d(0,${y.toFixed(1)}px,0)`; }, { passive: true });
+      fill(el, pg, true);
+    },
+    appear(el, p, pg) { fill(el, pg, false); },
+    reappear(el, p, pg) { fill(el, pg, false); }
+  };
+  function fill(el, pg, first) {
+    const d = D(), g = goalR(), lv = level(d), st = streak(d), name = (d.name || '').trim().split(/\s+/)[0] || 'explorador/a';
+    el.querySelector('[data-h5name]').textContent = name;
+    el.querySelector('[data-h5hello]').textContent = hello();
+    el.querySelector('[data-h5pts-v]').textContent = fmt(d.points || 0);
+    const pct = g ? Math.min(100, Math.round((d.points || 0) / g.p * 100)) : Math.min(100, lv.pct);
+    el.querySelector('[data-h5ring]').innerHTML = ring(pct, 64, 7, '#0F1B15', 'rgba(15,27,21,.14)');
+    el.querySelector('[data-h5goal]').textContent = g ? `${pct} % de l'objectiu` : 'Tria un objectiu';
+    el.querySelector('[data-h5st]').textContent = st;
+    el.querySelector('[data-h5stl]').textContent = st === 1 ? 'setmana seguida' : 'setmanes seguides';
+    el.querySelector('[data-h5dots]').innerHTML = weekDots(d).map((on, i) => `<i class="${on ? 'on' : ''}" title="${['Dl', 'Dt', 'Dc', 'Dj', 'Dv', 'Ds', 'Dg'][i]}"></i>`).join('');
+    el.querySelector('[data-h5co2v]').textContent = kmTx(d.co2);
+    el.querySelector('[data-h5lvln]').textContent = lv.i; el.querySelector('[data-h5lvl-n]').textContent = lv.n;
+    el.querySelector('[data-h5lvlbar]').style.width = lv.pct + '%';
+    el.querySelector('[data-h5lvll]').textContent = lv.next ? `${fmt(lv.left)} punts per a ${lv.next.n}` : 'Nivell màxim';
+    const B = badges(d); el.querySelector('[data-h5bdg]').innerHTML = B.slice(0, 5).map(b => `<span class="${b.ok ? 'ok' : ''}" title="${b.t}">${ICN(b.ic, 14)}</span>`).join('');
+    if (!IOS.rm()) { playRings(el); if (first) IOS.stagger(el.querySelectorAll('.h5-hero, .h5-feat, .bt5, .h5-nc'), { delay: 80, max: 12, dy: 18 }); }
+    if (pg.h5m) pg.h5m.set('saludant', { restart: true });
+  }
+
+  /* pestanyes: «Inici» al davant i obertura per defecte */
+  App.TABS.unshift({ k: 'inici', label: 'Inici', icon: 'home', root: 'home' });
+  const sm = App.startMain; App.startMain = o => sm(Object.assign({}, o || {}, { tab: (o && o.tab) || 'inici' }));
+
+  /* ---------- barra de pestanyes: indicador que llisca amb molla ---------- */
+  let indX = null;
+  function syncTab() {
+    const tb = IOS.app.querySelector('#sc-main > .tabbar'); if (!tb) return;
+    let ind = tb.querySelector('.tb5-ind'); if (!ind) { ind = h('<span class="tb5-ind" aria-hidden="true"></span>'); tb.prepend(ind); indX = null; }
+    const b = tb.querySelector('button[aria-selected="true"]'); if (!b) return;
+    tb.style.setProperty('--tacc', ACC[App.tab] || ACC.inici); tb.dataset.cur = App.tab;
+    const w = Math.min(64, b.offsetWidth - 6), x = b.offsetLeft + (b.offsetWidth - w) / 2;
+    ind.style.width = w + 'px';
+    if (indX === null || IOS.rm()) ind.style.transform = `translateX(${x}px)`;
+    else if (Math.abs(indX - x) > 1) IOS.anim(ind, [{ transform: `translateX(${indX}px) scaleX(1)` }, { transform: `translateX(${(indX + x) / 2}px) scaleX(1.35)`, offset: 0.45 }, { transform: `translateX(${x}px) scaleX(1)` }], IOS.S.soft);
+    indX = x;
+  }
+  App.hook(() => requestAnimationFrame(syncTab));
+  window.addEventListener('resize', () => { indX = null; syncTab(); });
+
+  /* ---------- colors per secció i pàgines d'Ajustos ---------- */
+  [23, 24, 25, 39].forEach(k => { if (SC[k]) SC[k].cls = ((SC[k].cls || '') + ' cfg5').trim(); });
+
+  /* ---------- Perfil: composició nova ---------- */
+  /* la mascota del perfil viu dins la targeta d'identitat: sense la bombolla flotant antiga */
+  if (typeof MascotUI !== 'undefined' && MascotUI.canShow) { const cs = MascotUI.canShow; MascotUI.canShow = k => (k === 'perfil' ? false : cs.call(MascotUI, k)); }
+  const P = SC[22];
+  if (P) {
+    const pr = P.render;
+    P.scrollThreshold = 190;
+    P.render = (p, pg) => {
+      const base = pr(p, pg), tmp = document.createElement('div'); tmp.innerHTML = base;
+      const take = s => { const e = tmp.querySelector(s); return e ? e.outerHTML : ''; };
+      const stats = take('#p-stats'), impact = take('#p-impact'), routes = take('#p-routes'), guest = take('[data-guest]'), pcard = take('[data-pcard]');
+      return `<div class="p5">
+        <div class="p5-cover">${photo('capcalera-perfil', 'position:absolute;inset:-20px 0;', '50% 55%', 'aria-hidden="true" data-p5par')}<div class="p5-sc"></div><h1 class="lt p5-title" data-ptitle>Perfil</h1></div>
+        <section class="p5-id cc">
+          <div class="p5-av"><span class="p5-ring" data-p5ring></span><span class="pav" data-pav>U</span></div>
+          <div class="p5-mas" data-p5mas></div>
+          <div data-pname><h2 class="p5-nm" data-pnm></h2><p class="fn mut" data-since></p></div>
+          <div class="p5-lvl"><span class="tag5 lv">${ICN('sprout', 14)} Nivell <b data-p5lvn>1</b> · <b data-p5lvt>Llavor</b></span><span class="tag5 st">${ICN('bolt', 14)} <b data-p5st>0</b>&nbsp;setm. de ratxa</span></div>
+          <div class="bar5"><i data-p5lvbar></i></div><p class="fn mut" data-p5lvl style="margin:6px 0 0"></p>
+        </section>
+        ${guest}
+        <section class="px p5-sec"><div class="p5-row">${pcard}</div></section>
+        <section class="px p5-sec"><div class="p5-h"><h2 class="t2">Insígnies</h2><span class="fn mut" data-p5bn></span></div><div class="bdgs5" data-p5bdgs></div></section>
+        ${stats}${impact}${routes}
+      </div>`;
+    };
+    const pm = P.mount, pa = P.appear, pre = P.reappear;
+    const p5 = (el, pg, first) => {
+      const d = D(), lv = level(d), st = streak(d), B = badges(d);
+      el.querySelector('[data-p5ring]').innerHTML = ring(lv.pct, 104, 6, 'var(--acc)', 'rgba(255,116,82,.18)');
+      el.querySelector('[data-p5lvn]').textContent = lv.i; el.querySelector('[data-p5lvt]').textContent = lv.n;
+      el.querySelector('[data-p5st]').textContent = st;
+      el.querySelector('[data-p5lvbar]').style.width = lv.pct + '%';
+      el.querySelector('[data-p5lvl]').textContent = lv.next ? `${fmt(lv.left)} punts per arribar a ${lv.next.n} (nivell ${lv.i + 1}).` : 'Has arribat al nivell més alt.';
+      el.querySelector('[data-p5bn]').textContent = `${B.filter(b => b.ok).length} de ${B.length}`;
+      el.querySelector('[data-p5bdgs]').innerHTML = B.map(b => `<div class="bdg5 ${b.ok ? 'ok' : ''}"><span class="bdg5-i">${ICN(b.ok ? b.ic : 'lock', 22)}</span><span class="bdg5-t">${b.t}</span><span class="sr">${b.ok ? 'Aconseguida' : 'Encara no'}</span></div>`).join('');
+      if (!IOS.rm()) { playRings(el); if (first) IOS.stagger(el.querySelectorAll('.bdg5'), { delay: 160, max: 8, dy: 10 }); }
+      if (pg.p5m) pg.p5m.set(B.some(b => b.ok) ? 'celebrant' : 'saludant', { restart: true });
+    };
+    P.mount = (el, p, pg) => {
+      pm(el, p, pg);
+      pg.p5m = Mascot.create(el.querySelector('[data-p5mas]'), { size: 72, state: 'saludant', label: 'Mascota de Valia' });
+      const par = el.querySelector('[data-p5par]');
+      pg.scroll.addEventListener('scroll', () => { if (IOS.rm() || !par) return; const y = Math.min(60, pg.scroll.scrollTop * 0.35); par.style.transform = `translate3d(0,${y.toFixed(1)}px,0) scale(${(1 + Math.max(0, -pg.scroll.scrollTop) / 400).toFixed(3)})`; }, { passive: true });
+      p5(el, pg, true);
+    };
+    P.appear = (el, p, pg) => { pa && pa(el, p, pg); p5(el, pg, false); };
+    P.reappear = (el, p, pg) => { pre && pre(el, p, pg); p5(el, pg, false); };
+  }
+
+  /* ---------- Recompenses: medalla de punts i mosaic ---------- */
+  const R = SC[31];
+  if (R) {
+    const rr = R.render;
+    R.navCls = 'r5nav'; R.sb = 'dark'; R.scrollThreshold = 120;
+    R.render = (p, pg) => {
+      const tmp = document.createElement('div'); tmp.innerHTML = rr(p, pg);
+      const goalbox = tmp.querySelector('[data-goalbox]').outerHTML, px = tmp.querySelector('.px'); const pxHtml = px ? px.innerHTML : '';
+      return `<div class="r5">
+        <section class="r5-hero">
+          <h1 class="lt r5-title">Recompenses</h1>
+          <div class="r5-medal"><span class="r5-ring" data-r5ring></span><span class="r5-in">${ICN('bolt', 26)}<b class="num" data-bal></b><span>punts d'energia</span></span></div>
+          <div class="r5-mas" data-r5mas></div>
+          <div class="r5-chips"><span class="tag5">${ICN('sprout', 14)} Nivell <b data-r5lv>1</b> · <b data-r5lvt>Llavor</b></span><span class="tag5">${ICN('bolt', 14)} <b data-r5st>0</b>&nbsp;setm. de ratxa</span></div>
+          <div class="r5-goal cc">${goalbox}</div>
+        </section>
+        <div class="px r5-body">${pxHtml}</div></div>`;
+    };
+    const rm0 = R.mount, rre = R.reappear;
+    const r5 = (el, pg) => {
+      const d = D(), g = goalR(), lv = level(d), pct = g ? Math.min(100, Math.round((d.points || 0) / g.p * 100)) : 0;
+      el.querySelector('[data-r5ring]').innerHTML = ring(pct, 196, 12, '#00A86B', 'rgba(255,255,255,.55)');
+      el.querySelector('[data-r5lv]').textContent = lv.i; el.querySelector('[data-r5lvt]').textContent = lv.n; el.querySelector('[data-r5st]').textContent = streak(d);
+      playRings(el);
+    };
+    R.mount = (el, p, pg) => {
+      rm0(el, p, pg);
+      pg.r5m = Mascot.create(el.querySelector('[data-r5mas]'), { size: 84, state: 'saludant', label: 'Mascota de Valia' });
+      r5(el, pg);
+    };
+    R.reappear = (el, p, pg) => { rre && rre(el, p, pg); r5(el, pg); if (pg.r5m) pg.r5m.set('saludant', { restart: true }); };
+  }
+  /* «Canvi fet!»: el confeti ja el llança la capa Polish quan apareix l'anell de confirmació */
+
+
+  /* ---------- etiquetes de composició per a pantalles concretes ---------- */
+  const tagCls = (k, c) => { if (SC[k]) SC[k].cls = ((SC[k].cls || '') + ' ' + c).trim(); };
+  [8, 9, 10, 36].forEach(k => tagCls(k, 'onb5')); tagCls(33, 'ok5'); tagCls(38, 'com5'); tagCls(37, 'cond5'); tagCls(15, 'filt5'); tagCls(19, 'run5'); tagCls(21, 'sum5');
+  /* la mascota acompanya els permisos */
+  const withMascot = (k, sel, size, state) => { const d = SC[k]; if (!d) return; const m0 = d.mount; d.mount = (el, p, pg) => { m0 && m0(el, p, pg); const host = el.querySelector(sel); if (!host) return; const box = h(`<div class="m5host" aria-hidden="true"></div>`); host.appendChild(box); const m = Mascot.create(box, { size, state, label: 'Mascota de Valia' }); m.el.style.color = sel === '.ring' ? '#fff' : ''; }; };
+  withMascot(9, '.ring', 118, 'saludant'); withMascot(8, '.perm-map', 86, 'buscant');
+
+
+  /* registre i inici de sessió: la mascota dona la benvinguda */
+  [3, 6].forEach(k => { const d = SC[k]; if (!d) return; const m0 = d.mount; d.mount = (el, p, pg) => { m0 && m0(el, p, pg); const body = el.querySelector('.dk-body'); if (!body || IOS.Keyboard && false) return; const box = h('<div class="m5dk" aria-hidden="true"></div>'); body.prepend(box); const m = Mascot.create(box, { size: 76, state: 'saludant', label: 'Mascota de Valia' }); m.el.style.color = '#3DDC97'; }; });
+  /* privacitat: capçalera amb la mascota i l'escut */
+  if (SC[10]) { const m0 = SC[10].mount; SC[10].mount = (el, p, pg) => { m0 && m0(el, p, pg); const sc = el.querySelector('.scroll'); if (!sc) return; const hero = h(`<div class="onb5-hero" aria-hidden="true"><div class="m5host"></div><span class="oh-ic">${ICN('shield', 34)}</span></div>`); sc.prepend(hero); const m = Mascot.create(hero.querySelector('.m5host'), { size: 104, state: 'escoltant', label: 'Mascota de Valia' }); m.el.style.color = '#fff'; }; }
+
+
+  /* fitxes: el títol passa a sobre de la foto a sang */
+  const heroTitle = k => { const d = SC[k]; if (!d) return; const m0 = d.mount; d.mount = (el, p, pg) => { m0 && m0(el, p, pg);
+    const hero = el.querySelector('.dhero'), body = el.querySelector('.dbody'); if (!hero || !body) return; const t = body.querySelector('h1'); if (!t) return;
+    const box = h('<div class="dh5"></div>'), nx = t.nextElementSibling; box.appendChild(t);
+    if (nx && !nx.querySelector('button,input') && !nx.matches('.stats3,.surf,.grow,.btn')) box.appendChild(nx);
+    hero.appendChild(box); hero.classList.add('dh5-on'); }; };
+  [17, 18, 32].forEach(heroTitle);
+
+
+  /* Explorar: botó flotant del mapa */
+  if (SC[14]) { const m0 = SC[14].mount; SC[14].mount = (el, p, pg) => { m0 && m0(el, p, pg); const fab = h(`<button type="button" class="fab5 press" aria-label="Veure les rutes al mapa">${ICN('map', 24)}<span>Mapa</span></button>`); pg.el.appendChild(fab); fab.addEventListener('click', () => pg.stack.push(16)); }; }
+
+  /* ---------- mode fosc (Accessibilitat → Aparença) ---------- */
+  const TH = 'valia.theme';
+  const getTh = () => { try { return localStorage.getItem(TH) || 'auto'; } catch (e) { return 'auto'; } };
+  const mq = window.matchMedia ? matchMedia('(prefers-color-scheme: dark)') : null;
+  function applyTh() {
+    const t = getTh(), dark = t === 'dark' || (t === 'auto' && mq && mq.matches), root = IOS.app || document.querySelector('.ios');
+    if (!root) return;
+    root.classList.toggle('th-dark', !!dark);
+    const m = document.querySelector('meta[name="theme-color"]'); if (m) m.setAttribute('content', dark ? '#0D1210' : '#F4F3EC');
+  }
+  if (mq && mq.addEventListener) mq.addEventListener('change', applyTh);
+  applyTh(); App.hook(() => { const r = IOS.app; if (r && !r._th5) { r._th5 = 1; applyTh(); } });
+  document.addEventListener('DOMContentLoaded', applyTh);
+  const A = SC[24];
+  if (A) {
+    const ar = A.render, am = A.mount;
+    A.render = (p, pg) => {
+      const idx = { light: 0, dark: 1, auto: 2 }[getTh()];
+      let html = ar(p, pg).replace(/Mode fosc: <span class="pend">Pendent de confirmar<\/span>/, 'Automàtic segueix el mode del mòbil.');
+      return html.replace(/(<div class="segc"[^>]*>)(<button[^>]*aria-selected="(?:true|false)">Clar<\/button><button[^>]*aria-selected="(?:true|false)">Fosc<\/button><button[^>]*aria-selected="(?:true|false)">Automàtic<\/button>)/, (m0, a, b) => a + b.replace(/aria-selected="(true|false)"/g, (() => { let k = -1; return () => { k++; return `aria-selected="${k === idx}"`; }; })()));
+    };
+    A.mount = (el, p, pg) => {
+      am && am(el, p, pg);
+      const sg = [...el.querySelectorAll('.segc')].find(s => /Fosc/.test(s.textContent));
+      if (sg) sg.querySelectorAll('button').forEach((b, i) => b.addEventListener('click', () => { try { localStorage.setItem(TH, ['light', 'dark', 'auto'][i]); } catch (e) { /* res */ } applyTh(); }));
+    };
   }
 })();
 
