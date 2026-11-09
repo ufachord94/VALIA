@@ -1,0 +1,22 @@
+{
+  "name": "valia-map",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Mapa del Vallès Oriental per a l'app Valia (MapLibre + OpenFreeMap + OSM)",
+  "scripts": {
+    "build:data": "node --max-old-space-size=4096 scripts/build-map-data.mjs",
+    "build:data:pbf": "node --max-old-space-size=4096 scripts/build-map-data.mjs --source=pbf",
+    "build:styles": "node scripts/build-styles.mjs",
+    "vendor": "node scripts/vendor.mjs",
+    "serve": "node scripts/serve.mjs 8080"
+  },
+  "devDependencies": {
+    "@turf/turf": "7.4.0",
+    "maplibre-contour": "0.1.1",
+    "maplibre-gl": "5.24.0",
+    "osm-pbf-parser-node": "1.1.4",
+    "pngjs": "7.0.0"
+  },
+  "license": "MIT"
+}

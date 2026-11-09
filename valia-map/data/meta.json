@@ -1,0 +1,58 @@
+{
+  "generated": "2026-11-09T14:16:49.721Z",
+  "osm_timestamp": "2026-11-09T01:20:02.000Z",
+  "source": "Extracte PBF Catalunya (download.openstreetmap.fr)",
+  "comarca": {
+    "name": "Vallès Oriental",
+    "osm_relation": 2417929,
+    "bbox": [
+      2.0959,
+      41.48863,
+      2.6088,
+      41.80871
+    ],
+    "added_municipalities": [
+      "Aiguafreda"
+    ],
+    "area_km2": 735.7
+  },
+  "counts": {
+    "routes": 76,
+    "routes_by_kind": {
+      "gr": 12,
+      "pr": 17,
+      "sl": 16,
+      "local": 18,
+      "btt": 3,
+      "ciclo": 10
+    },
+    "routes_km": 1605,
+    "path_segments": 14794,
+    "paths_km": {
+      "pista": 2553,
+      "sender": 1902,
+      "viaverda": 12,
+      "bici": 75
+    },
+    "paths_km_total": 4541,
+    "pois": {
+      "mirador": 64,
+      "bus": 542,
+      "font": 545,
+      "picnic": 27,
+      "patrimoni": 405,
+      "parking": 448,
+      "tren": 17
+    },
+    "municipalities": 39
+  },
+  "licenses": {
+    "osm": "© OpenStreetMap contributors — Open Database License (ODbL) 1.0 · https://www.openstreetmap.org/copyright",
+    "dem": "Terrain Tiles (AWS Open Data / Tilezen). Europe terrain data produced using Copernicus data and information funded by the European Union - EU-DEM layers; SRTM/GMTED2010 courtesy of the U.S. Geological Survey"
+  },
+  "method": {
+    "difficulty": "Temps estimat DIN 33466 (a peu: 4 km/h, +300 m/h, -500 m/h); BTT 12 km/h +600 m/h; carretera 18 km/h +700 m/h. 1 fàcil · 2 moderada · 3 difícil · 4 molt difícil",
+    "dem_zoom": 13,
+    "profile_step_m": 25
+  }
+}
