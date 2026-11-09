@@ -254,7 +254,7 @@
 
 /* mapa */
 .ios .map{position:absolute;inset:0}
-.ios .map svg{width:100%;height:100%;display:block}
+.ios .map > svg{width:100%;height:100%;display:block}
 
 /* «Reduir moviment»: cap transició de transformació a la interfície */
 .ios.rm .press.down{transform:none}
@@ -1662,3 +1662,25 @@ html.device .ios input,html.device .ios textarea{font-size:max(17px,1em,calc(16.
 .dqr-b button{min-height:36px;padding:0 12px;border-radius:10px;border:1.5px solid #D5DAD7;background:#fff;color:#0B0D0C;font:600 13px -apple-system,BlinkMacSystemFont,'Inter',system-ui,sans-serif;cursor:pointer}
 .dqr-b button:hover{border-color:#00754A}.dqr-b button:focus-visible{outline:3px solid #0A63D6;outline-offset:2px}
 .dside{max-width:340px}
+
+/* ===== Mapa real (valia-map): només posició dels controls del mòdul dins de les pantalles de l'app ===== */
+/* ordinador: l'app es veu dins d'un marc de mòbil, així que el mapa fa servir la disposició de mòbil */
+.framed .ios .vm-top{right:66px;width:auto}
+.framed .ios .vm-sheet{left:0;right:0;top:auto;width:auto;bottom:0;max-height:58%;border-radius:22px 22px 0 0;box-shadow:0 -10px 30px -10px rgba(0,0,0,.35)}
+.framed .ios .vm-grab{display:flex}
+.framed .ios .vm-shead{padding-top:0}
+.framed .ios .vm-sclose{top:0}
+.framed .ios .vm-has-sheet .maplibregl-ctrl-bottom-left{left:6px;opacity:0;pointer-events:none}
+.framed .ios .vm-has-sheet .maplibregl-ctrl-bottom-right{opacity:0;pointer-events:none}
+/* Explorar: el buscador i els botons del mapa queden sota la barra flotant; a baix, per sobre de la targeta i de les pestanyes */
+.ios .mappg .vm-top,.ios .mappg .vm-root .maplibregl-ctrl-top-right{top:calc(var(--safe-t) + 52px)}
+.ios .mappg .vm-side{top:calc(var(--safe-t) + 274px)}
+.ios .mappg .vm-panel{top:calc(var(--safe-t) + 108px);max-height:calc(100% - var(--safe-t) - 120px - var(--tab-h))}
+.ios .mappg .vm-root .maplibregl-ctrl-bottom-left,.ios .mappg .vm-root .maplibregl-ctrl-bottom-right{bottom:calc(var(--tab-h) + 122px)}
+.ios .mappg .vm-toast{bottom:calc(var(--tab-h) + 130px)}
+.ios .mappg .vm-sheet{bottom:var(--tab-h)}
+/* Ruta en curs: mana la interfície de la ruta (els botons de capes i ubicació de l'app obren els del mapa) */
+.ios .routepg .vm-top,.ios .routepg .vm-side,.ios .routepg .vm-sheet,.ios .routepg .vm-root .maplibregl-ctrl-top-right{display:none}
+.ios .routepg .vm-panel{top:calc(var(--safe-t) + 140px);right:60px;width:auto;left:10px;max-height:calc(100% - var(--safe-t) - 150px - var(--rp-h, 300px))}
+.ios .routepg .vm-root .maplibregl-ctrl-bottom-left,.ios .routepg .vm-root .maplibregl-ctrl-bottom-right{bottom:calc(var(--rp-h, 300px) + 2px);opacity:1;pointer-events:auto}
+.ios .routepg .vm-toast{bottom:calc(var(--rp-h, 300px) + 40px)}

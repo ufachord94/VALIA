@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Valia · Mapa del Vallès Oriental (demo)</title>
+<meta name="theme-color" content="#F4F3EC">
+<style>
+  :root{--paper:#F4F3EC;--ink:#0B0D0C;--ink2:#4E5852;--card:#fff;--line:rgba(40,56,48,.16);--tint:#00754A}
+  :root[data-theme="dark"]{--paper:#0D1210;--ink:#ECF2EE;--ink2:#B5C2BB;--card:#18201C;--line:rgba(220,235,228,.14);--tint:#16C083}
+  html,body{margin:0;height:100%;background:var(--paper);color:var(--ink);font:15px/1.4 Inter,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+  body{display:flex;flex-direction:column}
+  header{display:flex;align-items:center;gap:8px;padding:6px 10px;padding-top:max(6px,env(safe-area-inset-top));border-bottom:1px solid var(--line);flex-wrap:wrap}
+  header h1{margin:0 auto 0 0;font:800 17px/1 Inter,system-ui,sans-serif;display:flex;align-items:center;gap:8px}
+  header h1 i{width:22px;height:22px;border-radius:7px;background:linear-gradient(135deg,#1CC48A,#00A86B 52%,#009662)}
+  select,button.d{min-height:44px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:600 14px Inter,system-ui,sans-serif;padding:0 10px}
+  label.v{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  #mapa{flex:1;min-height:0}
+  #pv{display:none;gap:10px;padding:10px;overflow-x:auto;border-top:1px solid var(--line)}
+  #pv.on{display:flex}
+  .card{flex:none;width:200px;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
+  .card .m{height:120px}
+  .card p{margin:0;padding:8px 10px;font:600 13px/1.3 Inter,system-ui,sans-serif}
+</style>
+</head>
+<body>
+<header>
+  <h1><i aria-hidden="true"></i>Valia · Mapa</h1>
+  <label class="v" for="lang">Idioma</label>
+  <select id="lang"><option value="ca">Català</option><option value="es">Castellano</option><option value="en">English</option><option value="fr">Français</option></select>
+  <label class="v" for="theme">Tema</label>
+  <select id="theme"><option value="light">Clar</option><option value="dark">Fosc</option><option value="auto">Auto</option></select>
+  <button class="d" id="tpv" type="button" aria-pressed="false">Vistes prèvies</button>
+</header>
+<div id="mapa"></div>
+<div id="pv" aria-label="Vistes prèvies"></div>
+<script type="module">
+  import { initValiaMap, getValiaRoutes } from './valia-map.js';
+  const q = new URLSearchParams(location.search);
+  const $ = s => document.querySelector(s);
+  const lang = q.get('lang') || 'ca', theme = q.get('theme') || 'light';
+  $('#lang').value = lang; $('#theme').value = theme;
+  const applyDoc = t => { const d = t === 'dark' || (t === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches); document.documentElement.dataset.theme = d ? 'dark' : 'light'; document.documentElement.lang = $('#lang').value; };
+  applyDoc(theme);
+  const map = await initValiaMap($('#mapa'), {
+    lang, theme, mode: 'full', base: q.get('base') || 'map', route: q.get('route') || undefined,
+    onRouteDetail: r => alert(`Veure detall → ruta OSM ${r.id}\n${r.ref ? r.ref + ' · ' : ''}${r.name}`)
+  });
+  window.valiaMap = map; // per a proves
+  $('#lang').onchange = e => { map.setLang(e.target.value); applyDoc($('#theme').value); };
+  $('#theme').onchange = e => { map.setTheme(e.target.value); applyDoc(e.target.value); };
+  $('#tpv').onclick = async e => {
+    const on = $('#pv').classList.toggle('on'); e.target.setAttribute('aria-pressed', on); map.resize();
+    if (!on || $('#pv').childElementCount) return;
+    const rs = (await getValiaRoutes()).filter(r => r.complete).slice(0, 6);
+    for (const r of rs) {
+      const c = document.createElement('div'); c.className = 'card'; c.innerHTML = `<div class="m"></div><p>${r.ref ? r.ref + ' · ' : ''}${r.name}</p>`; $('#pv').appendChild(c);
+      initValiaMap(c.querySelector('.m'), { mode: 'preview', route: r.id, lang: $('#lang').value, theme: $('#theme').value, onOpen: () => map.selectRoute(r.id) });
+    }
+  };
+</script>
+</body>
+</html>
